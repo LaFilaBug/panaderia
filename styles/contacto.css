@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "agbalumo";
+    src: url("/assets/fonts/Agbalumo-Regular.ttf") format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'agbalumo';
+    /*esto seria la ruta de tu imagen*/
+
+    background-image: url("/assets/images/tendencias-pan-llopartec.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Sin esto lo que hace es repetir la imágen si es menor de 800 píxeles */
+    background-position: center center;
+    /* Con estos la centra  */
+    background-attachment: fixed;
+    /* Con estos la centra  */
+    background-size: cover;
+    /* La deja fina fina */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
