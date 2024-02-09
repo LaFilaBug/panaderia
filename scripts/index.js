@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if each button exists before adding event listener
     if (button1) {
         button1.addEventListener('click', function() {
-            window.location.href = '/index.html';
+            window.location.href = '../includes/index.php';
         });
     }
 
     if (buttonNosotros) {
         buttonNosotros.addEventListener('click', function() {
-            window.location.href = '/templates/contacto.html';
+            window.location.href = '../templates/contacto.php';
         });
     }
 
     if (buttonEstablecimiento) {
         buttonEstablecimiento.addEventListener('click', function() {
-            window.location.href = '/templates/acercade.html';
+            window.location.href = '../templates/acercade.php';
         });
     }
 });
