@@ -52,7 +52,7 @@
         <p>Welcome to our website! We are a team of passionate individuals dedicated to providing high-quality products and services.</p>
         <p>Our mission is to exceed customer expectations and deliver innovative solutions that make a positive impact.</p>
     </section>
-    <a href="/index.html">Volver a la página principal</a>
+    <a href="/index.php">Volver a la página principal</a>
     <script src="/scripts/index.js" type="module"></script>
 </body>
 </html>
