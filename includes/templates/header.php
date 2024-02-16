@@ -30,8 +30,6 @@
                     <li class="active"><a href="#inicio">Inicio</a></li>
                     <li><a href="contacto.php">Establecimientos</a></li>
                     <li><a href="menu.php">Menú</a></li>
-                    <li><a href="registro.php">Registrarse</a></li>
-                    <li><a href="inicioSesion.php">Iniciar sesión</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="registro.php">Registrarse</a></li>
