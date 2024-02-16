@@ -16,7 +16,7 @@
         <h1>Correo de contacto</h1>
         <p>pelayinBollu@hotmail.com</p>
         <p>Política de privacidad</p>
-        <a href="/index.html">Volver a la página principal</a>
+        <a href="/index.php">Volver a la página principal</a>
     </section>
     <script src="/scripts/index.js"></script>
 </body>
