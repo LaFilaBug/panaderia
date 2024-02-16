@@ -8,6 +8,6 @@ Este proyecto está siendo desarrollado por:
 
 - [Laura López Alonso](https://github.com/laurity) - Project Manager
 - [David Carril Miranda](https://github.com/Daniel-Carril-Miranda) - Bases de Datos
-- [Alejandro González Corroto ](https://github.com/usuario3) - CSS y Tailwind
+- [Alejandro González Corroto ](https://github.com/usuario3) - Estilos
 - [Adrian Iglesias Riño](https://github.com/Torremolinos) - Tester y multitasking
 - [Iván Lorenzo Ruiz](https://github.com/ivanlr96) - Javascript
