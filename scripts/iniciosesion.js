@@ -9,7 +9,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     if(password === storedPassword) {
         alert('Inicio de sesión exitoso');
         // Aquí puedes redirigir al usuario a la página principal o a cualquier otra página
-        window.location.href = '../index.html';
+        window.location.href = '../index.php';
     } else {
         alert('Error en el inicio de sesión');
     }
