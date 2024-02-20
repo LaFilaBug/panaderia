@@ -14,19 +14,17 @@
     $db = conectarDB();
 
     // Consultar para obtener los vendedores
-    $consulta = "SELECT * FROM vendedores";
+    $consulta = "SELECT * FROM panaderia where productos";
     $resultado = mysqli_query($db, $consulta);
 
     // Arreglo con mensajes de errores
     $errores = [];
 
-    $titulo = '';
-    $precio = '';
+    $id = '';
+    $nombre = '';
     $descripcion = '';
-    $habitaciones = '';
-    $wc = '';
-    $estacionamiento = '';
-    $vendedorId = '';
+    $precio = '';
+    $categoriasId = '';
 
     // Ejecutar el código después de que el usuario envia el formulario
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -40,18 +38,15 @@
         echo "</pre>";
 
 
-        $titulo = mysqli_real_escape_string( $db,  $_POST['titulo'] );
-        $precio = mysqli_real_escape_string( $db,  $_POST['precio'] );
+        $id = mysqli_real_escape_string( $db,  $_POST['id'] );
+        $nombre = mysqli_real_escape_string( $db,  $_POST['nombre'] );
         $descripcion = mysqli_real_escape_string( $db,  $_POST['descripcion'] );
-        $habitaciones = mysqli_real_escape_string( $db,  $_POST['habitaciones'] );
-        $wc = mysqli_real_escape_string( $db,  $_POST['wc'] );
-        $estacionamiento = mysqli_real_escape_string( $db,  $_POST['estacionamiento'] );
-        $vendedorId = mysqli_real_escape_string( $db,  $_POST['vendedor'] );
+        $precio = mysqli_real_escape_string( $db,  $_POST['precio'] );
+        $categoriasId = mysqli_real_escape_string( $db,  $_POST['categoriasId'] );
         $creado = date('Y/m/d');
 
         // Asignar files hacia una variable
         $imagen = $_FILES['imagen'];
-
 
 
         if(!$titulo) {
@@ -91,7 +86,7 @@
 
 
         if($imagen['size'] > $medida ) {
-            $errores[] = 'La Imagen es muy pesada';
+            $errores[] = 'La Imagen no es soportada';
         }
 
 
@@ -122,7 +117,7 @@
  
 
             // Insertar en la base de datos
-            $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId ) VALUES ( '$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' ) ";
+            $query = " INSERT INTO panarderia (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId ) VALUES ( '$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' ) ";
                 
             // echo $query;
 
