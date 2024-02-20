@@ -3,14 +3,14 @@
  * @github: https://github.com/TuniversEquipo3/ejercicio-panaderia
  */
 
-jQuery("#content1-headline1").fitText(1.0); // comprime el texto para que se ajuste al tamaño de la pantalla
-jQuery("#content1-headline2").fitText(1.0);
-jQuery("#content1-headline3").fitText(1.0);
-jQuery("#content2-1").fitText(2.0);
-jQuery("#content2-2").fitText(2.0);
-jQuery("#footer1").fitText(1.2);
-jQuery("#footer2").fitText(1.2);
-jQuery("#footer3").fitText(1.2);
+document.querySelector("#content1-headline1").style.fontSize = "1.0em";
+document.querySelector("#content1-headline2").style.fontSize = "1.0em";
+document.querySelector("#content1-headline3").style.fontSize = "1.0em";
+document.querySelector("#content2-1").style.fontSize = "2.0em";
+document.querySelector("#content2-2").style.fontSize = "2.0em";
+document.querySelector("#footer1").style.fontSize = "1.2em";
+document.querySelector("#footer2").style.fontSize = "1.2em";
+document.querySelector("#footer3").style.fontSize = "1.2em";
 
 
 
