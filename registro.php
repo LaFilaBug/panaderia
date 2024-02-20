@@ -16,14 +16,6 @@
     </form>
     <a href="inicioSesion.php">Ir a Inicio Sesion</a>
     <script src="../scripts/login.js"></script>
-    <script>
-    document.querySelector('a').addEventListener('click', function(event) {
-    event.preventDefault(); // Previene la acción predeterminada del enlace
-    this.classList.add('moveUp'); // Agrega la clase 'moveUp' al enlace
-    setTimeout(function() {
-        window.location.href = 'inicioSesion.php'; // Redirige a la página principal
-            }, 1000); // Espera 1 segundo (la duración de la animación) antes de redirigir
-        });
-</script>
+    <script src="/scripts/botonVolador.js"></script>
 </body>
 </html>
