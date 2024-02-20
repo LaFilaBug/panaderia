@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-    <title>Menú de Repostería Casera</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style> 
-       body {
-        background-image: url("/assets/images/tendencias-pan-llopartec.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    h1 {
-        font-family: 'Arial', sans-serif;
-        color: #000000;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-    .card-img {
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    </style>
-
-</head>
-<body>
+<?php
+include 'includes/templates/header.php';
+?>
     <h1 class="text-center mt-4 mb-4">Nuestro Menú</h1>
     <div class="m-3">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -57,7 +32,7 @@
             </div>
           </div>
         </div>
-        <a href="/index.html" class="mt-3 btn btn-light text-dark">Volver a la página principal</a>      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+        <a href="/index.php" class="mt-3 btn btn-light text-dark">Volver a la página principal</a>      </div>
+        <?php
+include 'includes/templates/footer.php';
+?>

@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/contacto.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Contacto</title>        
-</head>
-<body>
+<?php
+include 'includes/templates/header.php';
+?>
     <section id="contacto" class="contacto2">
         <h1>Telefono de contacto</h1>
         <p>+34 948 69 23 80</p>
@@ -16,8 +9,9 @@
         <h1>Correo de contacto</h1>
         <p>pelayinBollu@hotmail.com</p>
         <p>Política de privacidad</p>
-        <a href="/index.html">Volver a la página principal</a>
+        <a href="/index.php">Volver a la página principal</a>
     </section>
     <script src="/scripts/index.js"></script>
-</body>
-</html>
+    <?php
+include 'includes/templates/footer.php';
+?>
