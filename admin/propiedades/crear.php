@@ -191,12 +191,12 @@
             </fieldset>
 
             <fieldset>
-                <legend>Vendedor</legend>
+                <legend>Categoría</legend>
 
-                <select name="vendedor">
+                <select name="categoria">
                     <option value="">-- Seleccione --</option>
-                    <?php while($vendedor =  mysqli_fetch_assoc($resultado) ) : ?>
-                        <option  <?php echo $vendedorId === $vendedor['id'] ? 'selected' : ''; ?>   value="<?php echo $vendedor['id']; ?>"> <?php echo $vendedor['nombre'] . " " . $vendedor['apellido']; ?> </option>
+                    <?php while($categoria =  mysqli_fetch_assoc($resultado) ) : ?>
+                        <option  <?php echo $categoria === $categoria['id'] ? 'selected' : ''; ?>   value="<?php echo $categoria['id']; ?>"> <?php echo $categoria['nombre'] . " " . $categoria['apellido']; ?> </option>
                     <?php endwhile; ?>
                 </select>
             </fieldset>
