@@ -45,7 +45,7 @@ label {
 input {
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     border-radius: 5px;
     transition: all 0.3s ease; /* Add a transition for smooth animation */
 }
@@ -93,7 +93,7 @@ button:hover {
     background-image: url('../assets/images/pan.png');
     background-size: 99.5%;
     background-repeat: no-repeat;
-   
+    font-weight: 700;
 }
 @keyframes moveUp {
     0% {
