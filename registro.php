@@ -14,8 +14,8 @@
         <input type="password" id="regPassword" name="regPassword" required><br>
         <input type="submit" value="Registrarse">
     </form>
-    <a href="inicioSesion.php">Ir a Inicio Sesion</a>
+    <a href="inicioSesion.php" class="IrAinicio">Ir a Inicio Sesion</a>
     <script src="../scripts/login.js"></script>
-    <script src="/scripts/botonVolador.js"></script>
+    <script src="./scripts/botonVolador.js"></script>
 </body>
 </html>
