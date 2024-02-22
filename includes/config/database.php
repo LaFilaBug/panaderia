@@ -4,7 +4,7 @@ function conectarDB() : mysqli {
     $db = mysqli_connect('localhost', 'root', 'root', 'panaderia', 3306);
 
     if(!$db) {
-        echo "Error no se pudo conectar a la base de datos";
+        echo "Error no se pudo conectar";
         exit;
     } 
 
