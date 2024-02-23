@@ -64,6 +64,5 @@
             <button type='submit'>Enviar</button>
 
            <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
-        </form>
-        
+        </form> 
 </html>
