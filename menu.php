@@ -32,7 +32,7 @@ include 'includes/templates/header.php';
             </div>
           </div>
         </div>
-        <a href="/index.php" class="mt-3 btn btn-light text-dark">Volver a la página principal</a>      </div>
+        <a href="/panaderia/index.php" class="mt-3 btn btn-light text-dark">Volver a la página principal</a>      </div>
         <?php
 include 'includes/templates/footer.php';
 ?>
