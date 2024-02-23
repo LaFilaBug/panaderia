@@ -63,5 +63,7 @@
             <button type='submit'>Enviar</button>
         </form>
         <a href='registro.php'>Regístrese para comenzar el pedido</a>
+        <br>
+        <a href="/panaderia/index.php">Volver al inicio</a>
 </body>
 </html>

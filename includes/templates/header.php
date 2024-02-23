@@ -20,14 +20,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/panaderia/index.php">
                     <img
                         src="https://res.cloudinary.com/dbqqjaqqa/image/upload/v1489836162/smaller_size_logo_wigzr1.png"></img>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/index.php">Inicio</a></li>
+                    <li class="active"><a href="/panaderia/index.php">Inicio</a></li>
                     <li><a href="contacto.php">Establecimientos</a></li>
                     <li><a href="menu.php">Menú</a></li>
                 </ul>
