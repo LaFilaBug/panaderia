@@ -51,19 +51,19 @@
     <link rel="stylesheet" href="styles/stylesInicioSesion.css">
 </head>
 <body>
-        <h1>Iniciar Sesión</h1>
+        
         <?php if (isset($err)): ?>
             <p class='incorrect'>Usuario o contraseña incorrectos</p>
         <?php endif; ?>
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
-            <label for='usuario'>Usuario: </label>
-            <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario' placeholder='Usuario...'required> 
-            <label for='clave'>Contraseña: </label>
-            <input type='password' name='clave' placeholder='Contraseña...' required>
+        <h1>Iniciar Sesión</h1>
+            <label for='usuario'class='username'>Usuario: </label>
+            <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
+            <label for='clave'class='password'>Contraseña: </label>
+             <input type='password' name='clave' required> 
             <button type='submit'>Enviar</button>
+
+           <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
         </form>
-        <a href='registro.php'>Regístrese para comenzar el pedido</a>
-        <br>
-        <a href="/panaderia/index.php">Volver al inicio</a>
-</body>
+        
 </html>

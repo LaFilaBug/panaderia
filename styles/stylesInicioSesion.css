@@ -2,76 +2,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    color: rgb(0, 0, 0);
+    /* Crea un degradado de fondo */
+    /* background: linear-gradient(to right, #ffbe45, #96bb00e2); */
+    background-image: url('../assets/images/fondoRegistro.jpg');
+    background-position: center;
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    font-family: 'Roboto';
-    background: url("../assets/images/tendencias-pan-llopartec.jpg") center center / cover fixed no-repeat;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    /* Estilos del formulario */
+    background: #fff;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+
 }
 
 h1 {
+    /* Estilos del título */
     text-align: center;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
-    padding: 10px; /* Add some padding */
-    border-radius: 5px; /* Add rounded corners */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow */
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 label {
-    margin-bottom: 10px;
+    /* Estilos de las etiquetas */
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
 }
-
 input {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: all 0.3s ease; /* Add a transition for smooth animation */
+      /* Estilos de los campos de entrada */
+      width: 90%; /* Ajusta el ancho */
+      margin: 0 auto; /* Añade márgenes automáticos */
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none; /* Elimina el borde */
+      border-bottom: 2px solid #ddd; /* Agrega una línea inferior */
+      border-radius: 0; /* Elimina los bordes redondeados */
+      font-size: 14px;
+      background: transparent; /* Hace que el fondo sea transparente */
+      outline: none; /* Elimina el contorno al seleccionar el campo de entrada */
 }
 
-input:hover, input:focus {
-    border: 1px solid #0056b3; /* Change border color on hover and focus */
-    box-shadow: 0 0 10px #0056b3; /* Add a shadow on hover and focus */
+input:focus {
+    /* Cambia el color de la línea inferior cuando el campo de entrada está enfocado */
+    border-bottom: 2px solid #ffdd00;
 }
 
 button {
+    /* Estilos del botón */
+    width: 40%;
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #f5bc2b;
+    background: linear-gradient(to right, #ffbe45, #d87300e2);
     color: #fff;
+    border-radius: 4px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: medium;
 }
 
 button:hover {
-    background-color: #0056b3;
+    /* Estilos del botón al pasar el ratón */
+    background: #a74000;
 }
 
-/* Responsive styles */
-@media (max-width: 480px) {
-    form {
-        width: 90%; /* Cambiar el ancho del formulario al 90% del ancho del dispositivo */
-        padding: 20px; /* Cambiar el relleno del formulario */
-    }
-    input, button {
-        padding: 15px; /* Aumentar el relleno de los campos de entrada y botones */
-        font-size: 16px; /* Aumentar el tamaño de fuente de los campos de entrada y botones */
-        width: 100%; /* Ajustar el ancho de los campos de entrada y botones al 100% */
-    }
+.IrRegistro {
+    /* Estilos del enlace de registro */
+    display: inline-block; 
+    animation: pulse 2s infinite; 
+    text-align: center;
+    margin-top: 20px;
+    color: #ff9d00;
+    text-decoration: none;
+    transition: transform 0.3s ease, text-decoration 0.3s ease; /* Añade transición */
 }
+
+.IrRegistro:hover {
+    /* Estilos del enlace de registro al pasar el ratón */
+    text-decoration: none !important; /* Elimina la línea debajo del enlace */
+    transform: scale(1.2); /* Aumenta el tamaño del enlace */
+}
+
+
