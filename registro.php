@@ -48,19 +48,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-<h1>REGISTRO</h1>
+
 <form method='POST'>
+    <h1>REGISTRO</h1>
     <label for='nombre'>Introduzca nombre:</label>
-    <input type='text' name='nombre' placeholder='Nombre...' required><br>
+    <input type='text' name='nombre' required><br>
     <label for='usuario'>Introduzca nombre usuario:</label>
-    <input type='text' name='usuario' placeholder='Nombre de usuario...' required><br>
+    <input type='text' name='usuario' required><br>
     <label for='clave'>Introduzca clave:</label>
-    <input type='password' name='clave' placeholder='Contraseña...' required><br>
+    <input type='password' name='clave'  required><br>
     <label for='correo'>Introduzca correo:</label>
-    <input type='text' name='correo' placeholder='Introduzca correo...' required><br>
+    <input type='text' name='correo'  required><br>
     <button type='submit'>Enviar</button>
     
-    <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a>
+ <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 
 
 </form>
 </body>
