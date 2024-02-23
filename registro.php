@@ -61,6 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type='submit'>Enviar</button>
 </form>
 <a href="inicioSesion.php">Inicie sesión aquí si ya tienes cuenta</a>
+<br>
+<a href="/panaderia/index.php">Volver al Inicio</a>
 </body>
 
 </html>
