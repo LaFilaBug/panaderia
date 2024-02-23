@@ -60,15 +60,14 @@ button {
     border: none;
     border-radius: 5px;
     background-color: #f5bc2b;
-    color: #e8961a;
+    color: #ffffff;
     cursor: pointer;
+    font-size: medium;
 }
 
 button:hover {
     background-color: #0056b3;
 }
-
-
 
 .moveUp {
     animation-name: moveUp;
@@ -79,7 +78,7 @@ button:hover {
 .IrAinicio {
     font-family: 'Roboto';
     display: inline-block;
-    color: #000000;
+    color: #0400ff;
     text-decoration: none;
     transition: all 0.3s ease;
     padding: 25px; 
@@ -87,14 +86,26 @@ button:hover {
     
     position: relative;
     font-size: larger;
+    animation: pulse 2s infinite;
 
-
-    /* Añade la imagen de fondo */
-    background-image: url('../assets/images/pan.png');
+    /* background-image: url('../assets/images/pan.png');
     background-size: 99.5%;
     background-repeat: no-repeat;
-    font-weight: 700;
+    font-weight: 700; */
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 @keyframes moveUp {
     0% {
         top: 0;

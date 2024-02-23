@@ -48,19 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-<<<<<<< HEAD
-    <h1>Registro</h1>
-    <form id="registerForm">
-        <label for="regUsername">Nombre de usuario:</label><br>
-        <input type="text" id="regUsername" name="regUsername" required><br>
-        <label for="regPassword">Contraseña:</label><br>
-        <input type="password" id="regPassword" name="regPassword" required><br>
-        <input type="submit" value="Registrarse">
-    </form>
-    <a href="inicioSesion.php" class="IrAinicio">Ir a Inicio Sesion</a>
-    <script src="../scripts/login.js"></script>
-    <script src="./scripts/botonVolador.js"></script>
-=======
 <h1>REGISTRO</h1>
 <form method='POST'>
     <label for='nombre'>Introduzca nombre:</label>
@@ -72,9 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <label for='correo'>Introduzca correo:</label>
     <input type='text' name='correo' placeholder='Introduzca correo...' required><br>
     <button type='submit'>Enviar</button>
+    
+    <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a>
+
 </form>
-<a href="inicioSesion.php">Inicie sesión aquí si ya tienes cuenta</a>
->>>>>>> 4c7593e9dfd261967dc0ee3644debf087b471c1e
 </body>
 
 </html>
