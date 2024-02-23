@@ -51,10 +51,10 @@ CREATE TABLE `productos` (
   `nombre` varchar(45) DEFAULT NULL,
   `descripcion` varchar(255) DEFAULT NULL,
   `precio` decimal(4,2) DEFAULT NULL,
-  `Categorias_id` int NOT NULL,
+  `categorias_id` int NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Productos_Categorias_idx` (`Categorias_id`),
-  CONSTRAINT `fk_Productos_Categorias` FOREIGN KEY (`Categorias_id`) REFERENCES `categorias` (`id`)
+  KEY `fk_Productos_Categorias_idx` (`categorias_id`),
+  CONSTRAINT `fk_Productos_Categorias` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -79,10 +79,10 @@ CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
   `usuario` varchar(45) DEFAULT NULL,
-  `contraseña` varchar(45) DEFAULT NULL,
+  `clave` varchar(45) DEFAULT NULL,
   `correo` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -91,7 +91,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Daniel','dani2000','daniel2000','daniel2000@gmail.com'),(2,'Laura','lau2000','laura2000','laura2000@gmail.com'),(3,'Adrián','adri89','adrian1989','adrian1989@gmail.com'),(4,'Iván','ivi96','ivan1996','ivan1996@gmail.com'),(5,'Alejandro','corroto99','corroto99','corroto99@gmail.com');
+INSERT INTO `usuarios` VALUES (1,'Admin','admin','admin','admin@admin.com'),(2,'random','random','1234','random@random.es');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-20 13:11:50
+-- Dump completed on 2024-02-22 16:31:09
