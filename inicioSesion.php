@@ -65,6 +65,6 @@
 
            <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
         </form>
-       
+        <a href='registro.php'>Regístrese para comenzar el pedido</a>
 </body>
 </html>
