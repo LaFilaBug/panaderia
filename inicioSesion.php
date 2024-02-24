@@ -1,5 +1,5 @@
 <?php
-    require 'includes/config/database.php';
+     require 'includes/config/database.php';
 
     function comprobar_usuario($usuario, $clave) {
         $bd = conectarDB();
