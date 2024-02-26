@@ -2,6 +2,23 @@
 session_start();
 include '../includes/config/database.php';
 
+function borrarProducto($id)
+{
+    $bd = conectarDB();
+    $consulta = $bd->prepare("DELETE FROM productos WHERE id = ?");
+    $consulta->bind_param("i", $id);
+    
+    $consulta->execute();
+
+    $consulta->close();
+    $bd->close();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["borrar"])) {
+    $idProducto = $_POST["id"];
+    borrarProducto($idProducto);
+}
+
 function listarPanaderia()
 {
     $bd = conectarDB();
