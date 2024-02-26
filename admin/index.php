@@ -5,19 +5,38 @@ include '../includes/config/database.php';
 function borrarProducto($id)
 {
     $bd = conectarDB();
+
+    // Obtener el nombre 
+    $consulta = $bd->prepare("SELECT imagen FROM productos WHERE id = ?");
+    $consulta->bind_param("i", $id);
+    $consulta->execute();
+    $consulta->bind_result($imagen);
+    $consulta->fetch();
+    $consulta->close();
+
+    // Eliminar la imagen
+    if ($imagen != null) {
+        $rutaImagen = '../imagenes/' . $imagen;
+        if (file_exists($rutaImagen)) {
+            unlink($rutaImagen); 
+        }
+    }
+
+    // Eliminar el producto de la base de datos
     $consulta = $bd->prepare("DELETE FROM productos WHERE id = ?");
     $consulta->bind_param("i", $id);
-    
     $consulta->execute();
 
     $consulta->close();
     $bd->close();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["borrar"])) {
-    $idProducto = $_POST["id"];
-    borrarProducto($idProducto);
+if (isset($_POST['borrar'])) {
+    $id = $_POST['id'];
+    borrarProducto($id);
 }
+
+
 
 function listarPanaderia()
 {
