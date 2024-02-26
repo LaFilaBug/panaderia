@@ -8,13 +8,20 @@ function listarPanaderia()
     $consulta = $bd->prepare("SELECT id, nombre, descripcion, precio, imagen FROM productos");
     $consulta->execute();
 
-    $resultado = $consulta->get_result(); // Obtén los resultados de la consulta
+    $resultado = $consulta->get_result(); 
 ?>
     <table>
     <h1>Zona Admin</h1>
+    <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php">Crear Producto</a></p>
     <?php while ($row = $resultado->fetch_assoc()): ?>
         <tr>
-            <td><img src='<?= $row['imagen'] ?>' alt='<?= $row['nombre'] ?>' width='100' height='100'></td>
+            <?php
+            if (!empty($row['imagen'])) {
+                echo "<td><img src='../imagenes/" . $row['imagen'] . "' width='100'></td>";
+            } else {
+                echo "<td><img src='https://via.placeholder.com/150' width='100'></td>";
+            }
+            ?>
             <td><?= $row['nombre'] ?></td>
             <td><?= $row['descripcion'] ?></td>
             <td><?= $row['precio'] ?>€</td>
@@ -44,5 +51,6 @@ function listarPanaderia()
 </head>
 <body>
     <?php listarPanaderia(); ?>
+    <a href='../../index.php?logout=true'>Cerrar Sesión</a>
 </body>
 </html>
