@@ -47,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
 ?>
     <h1>Zona Admin CREAR</h1>
+    <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
     <form action="" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>

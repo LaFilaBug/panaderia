@@ -1,7 +1,16 @@
 <?php
 session_start();
-?>
 
+if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    // Destruir todas las variables de sesión
+    session_unset();
+    // Finalizar la sesión
+    session_destroy();
+    // Redirigir a alguna página o recargar la misma página después de cerrar sesión
+    header("Location: index.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -40,14 +49,21 @@ session_start();
                     <li><a href="menu.php">Menú</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <h3 class="<?php echo !isset($_SESSION['usuario']) ? 'esconde' : ''; ?>">Bienvenido, <?php echo $_SESSION['nombre'] ?></h3>
-                    </li>
-                    <?php if (!isset($_SESSION['usuario'])) { ?>
+                    <?php if (isset($_SESSION['usuario'])) : ?>
+                        <li class="<?php echo isset($_SESSION['usuario']) ? 'esconde' : ''; ?>">
+                            <a>Bienvenido, <?php echo isset($_SESSION['usuario']) ? $_SESSION['usuario'] : ''; ?></a>
+                        </li>
+                    <?php endif; ?>
+                    <?php if (!isset($_SESSION['usuario'])) : ?>
                         <li><a href="inicioSesion.php">Iniciar sesión</a></li>
                         <li><a href="registro.php">Registrarse</a></li>
-                    <?php } ?>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['usuario'])) : ?>
+                        <li><a href="index.php?logout=true">Cerrar sesión</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
     </nav>
+</body>
+</html>

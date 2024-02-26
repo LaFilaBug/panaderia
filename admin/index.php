@@ -3,7 +3,7 @@ session_start();
 include '../includes/config/database.php';
 
 if (!isset($_SESSION["usuario"])) {
-    header("Location: Index.php?redirigido=true");
+    header("Location: /panaderia/Index.php?redirigido=true");
     exit;
 }
 
