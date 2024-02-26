@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -7,6 +11,11 @@
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="styles/index.css" />
+    <style>
+        .esconde {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,8 +30,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/panaderia/index.php">
-                    <img
-                        src="https://res.cloudinary.com/dbqqjaqqa/image/upload/v1489836162/smaller_size_logo_wigzr1.png"></img>
+                    <img src="https://res.cloudinary.com/dbqqjaqqa/image/upload/v1489836162/smaller_size_logo_wigzr1.png"></img>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -32,9 +40,13 @@
                     <li><a href="menu.php">Menú</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="registro.php">Registrarse</a></li>
-                    <li><a href="inicioSesion.php">Iniciar sesión</a></li>
->>>>>>> a43cdc20b4f99f703bbee691c6bc66851c998d1d
+                    <li>
+                        <h3 class="<?php echo !isset($_SESSION['usuario']) ? 'esconde' : ''; ?>">Bienvenido, <?php echo $_SESSION['nombre'] ?></h3>
+                    </li>
+                    <?php if (!isset($_SESSION['usuario'])) { ?>
+                        <li><a href="inicioSesion.php">Iniciar sesión</a></li>
+                        <li><a href="registro.php">Registrarse</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </div>
