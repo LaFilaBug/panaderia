@@ -1,5 +1,5 @@
 <?php
-    require 'includes/config/database.php';
+     require 'includes/config/database.php';
 
     function comprobar_usuario($usuario, $clave) {
         $bd = conectarDB();
@@ -65,5 +65,8 @@
 
            <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
         </form>
-        
+        <a href='registro.php'>Regístrese para comenzar el pedido</a>
+        <br>
+        <a href="/panaderia/index.php">Volver al inicio</a>
+</body>
 </html>
