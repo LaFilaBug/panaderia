@@ -57,16 +57,22 @@
         <?php endif; ?>
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1>Iniciar Sesión</h1>
-            <label for='usuario'class='username'>Usuario: </label>
+            <label for='usuario'class='username'>&#128100;  Usuario: </label>
             <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
-            <label for='clave'class='password'>Contraseña: </label>
+            <label for='clave'class='password'>&#128274; Contraseña: </label>
              <input type='password' name='clave' required> 
-            <button type='submit'>Enviar</button>
 
-           <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
+        <div class="container">
+
+                <button class="button" type='submit'>Enviar</button>
+
+                <button class="button" onclick="location.href='./index.php'" > Volver</button>
+
+        </div>
+            
+           <center> <a href='registro.php' class="IrRegistro">Regístrese AQUÍ para comenzar el pedido</a> </center>
         </form>
-        <a href='registro.php'>Regístrese para comenzar el pedido</a>
-        <br>
-        <a href="./index.php">Volver al inicio</a>
+   
+        
 </body>
 </html>
