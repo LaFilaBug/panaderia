@@ -67,6 +67,6 @@
         </form>
         <a href='registro.php'>Regístrese para comenzar el pedido</a>
         <br>
-        <a href="/panaderia/index.php">Volver al inicio</a>
+        <a href="./index.php">Volver al inicio</a>
 </body>
 </html>

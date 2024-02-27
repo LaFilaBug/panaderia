@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 <a href="inicioSesion.php">Inicie sesión aquí si ya tienes cuenta</a>
 <br>
-<a href="/panaderia/index.php">Volver al Inicio</a>
+<a href="./index.php">Volver al Inicio</a>
 </body>
 
 </html>
