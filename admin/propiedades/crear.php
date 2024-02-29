@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         header('Location: ../index.php');
     } 
-} else {
+}
 ?>
     <h1>Zona Admin CREAR</h1>
     <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
@@ -70,6 +70,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <input type="submit" value="Guardar Producto">
     </form>
-<?php
-}
-?>
