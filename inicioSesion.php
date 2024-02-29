@@ -66,13 +66,7 @@
 
                 <button class="button" type='submit'>Enviar</button>
 
-                <button class="button" onclick="location.href='./index.php'" > Volver</button>
-
-        </div>
-            
-           <center> <a href='registro.php' class="IrRegistro">Regístrese AQUÍ para comenzar el pedido</a> </center>
+           <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
         </form>
-   
         
-</body>
 </html>
