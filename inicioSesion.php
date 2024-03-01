@@ -60,13 +60,16 @@
             <label for='usuario'class='username'>&#128100;  Usuario: </label>
             <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
             <label for='clave'class='password'>&#128274; Contraseña: </label>
-             <input type='password' name='clave' required> 
+            <input type='password' name='clave' required> 
 
         <div class="container">
 
-                <button class="button" type='submit'>Enviar</button>
+                <button class="button" type='submit'>Acceder</button>
 
-           <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
-        </form>
+                <button class="button" onclick="location.href='./index.php'" > Volver</button>
+
+        </div>
+        <br>
         
+        <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
 </html>
