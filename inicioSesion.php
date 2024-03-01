@@ -61,7 +61,6 @@
     </div>
 <?php endif; ?>
 
-
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1>Iniciar Sesión</h1>
             <label for='usuario'class='username'>&#128100;Usuario: </label>
