@@ -46,27 +46,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } 
 }
 ?>
-    <h1>Zona Admin CREAR</h1>
-    <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
-    <form action="" method="post" enctype="multipart/form-data">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona Admin CREAR</title>
+<link rel="stylesheet" type="text/css" href="/styles/stylesAdmin/crear.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zona Admin CREAR</h1>
+        <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
 
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" step="0.01" required>
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
 
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria" required>
-            <?php foreach ($categorias as $categoria): ?>
-                <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
-            <?php endforeach; ?>
-        </select>
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <?php foreach ($categorias as $categoria): ?>
+                    <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
+                <?php endforeach; ?>
+            </select>
 
-        <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" required>
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" required>
 
-        <input type="submit" value="Guardar Producto">
-    </form>
+            <input type="submit" value="Guardar Producto">
+        </form>
+    </div>
+</body>
+</html>
