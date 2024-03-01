@@ -53,6 +53,13 @@ body {
   display: none;
 }
 
+/*boton darkmode*/
+.dark {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+}
+
 .parrafo {
   font-family: "Montserrat", sans-serif;
   color: #49130c;
