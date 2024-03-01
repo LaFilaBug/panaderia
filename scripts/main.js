@@ -22,3 +22,13 @@ window.addEventListener("resize", function () {
   }
 });
 
+
+function darkMode() {
+  const botonDarkMode = document.querySelector("#dark-mode");
+  const body = document.querySelector("body");
+  botonDarkMode.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+  });
+}
+
+
