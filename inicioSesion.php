@@ -52,9 +52,16 @@
 </head>
 <body>
         
-        <?php if (isset($err)): ?>
-            <p class='incorrect'>Usuario o contraseña incorrectos</p>
-        <?php endif; ?>
+<!-- Este codigo lo he modificado para poder crear una ventana emergente y que se borre -->
+
+<?php if (isset($err)): ?>
+    <div id="error-container" class="error-container">
+        <p class="incorrect">Usuario o contraseña incorrectos</p>
+        <span id="close-btn" class="close-btn">&times;</span>
+    </div>
+<?php endif; ?>
+
+
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1>Iniciar Sesión</h1>
             <label for='usuario'class='username'>&#128100;  Usuario: </label>
@@ -73,3 +80,5 @@
         
         <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
 </html>
+<script src="./scripts/jsErrorSesión.js"></script>
+
