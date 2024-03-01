@@ -59,17 +59,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type='password' name='clave'  required><br>
     <label for='correo'>&#x1F4E7; Introduzca correo:</label>
     <input type='text' name='correo'  required><br>
-<div class="container">
 
-    <button class="button" type='submit'>Enviar</button>
+    <div class="container">
 
-    <button class="button" onclick="location.href='./index.php'" > Volver</button>
+        <button class="button" type='submit'>Enviar</button>
 
-</div>
-    <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aqu si ya tienes cuenta</a> </center> 
-    <br>
+        <button class="button" onclick="location.href='./index.php'" > Volver</button>
+
+    </div>
+
+    <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 
+    
+
 </form>
-
 </body>
 
 </html>

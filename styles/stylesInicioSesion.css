@@ -99,3 +99,32 @@ button:hover {
 }
 
 
+
+/* Errores de inicio de sesion */
+
+.error-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2dede; /* Color de fondo para el contenedor de error */
+    padding: 20px;
+    border: 1px solid #ebccd1; /* Borde para el contenedor de error */
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000; /* Asegura que el contenedor de error esté por encima de otros elementos */
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #a94442; /* Color del botón de cerrar */
+}
