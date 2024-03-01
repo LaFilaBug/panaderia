@@ -49,10 +49,10 @@
     <meta charset="UTF-8" />
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="styles/stylesInicioSesion.css">
-</head>
-<body>
-        
+
+</head>        
 <!-- Este codigo lo he modificado para poder crear una ventana emergente y que se borre -->
+<body class="inicioSesion">
 
 <?php if (isset($err)): ?>
     <div id="error-container" class="error-container">
@@ -82,3 +82,5 @@
 </html>
 <script src="./scripts/jsErrorSesión.js"></script>
 
+
+</body>
