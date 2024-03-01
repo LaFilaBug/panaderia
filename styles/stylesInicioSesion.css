@@ -88,7 +88,10 @@ button:hover {
     text-decoration: none;
     transition: transform 0.3s ease, text-decoration 0.3s ease; /* Añade transición */
 }
-
+.container {
+    display: flex;
+    justify-content: space-between;
+}
 .IrRegistro:hover {
     /* Estilos del enlace de registro al pasar el ratón */
     text-decoration: none !important; /* Elimina la línea debajo del enlace */

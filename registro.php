@@ -51,22 +51,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <form method='POST'>
     <h1>REGISTRO</h1>
-    <label for='nombre'>Introduzca nombre:</label>
+    <label for='nombre'>&#x1F464; Introduzca nombre:</label>
     <input type='text' name='nombre' required><br>
-    <label for='usuario'>Introduzca nombre usuario:</label>
+    <label for='usuario'>&#128100; Introduzca nombre usuario:</label>
     <input type='text' name='usuario' required><br>
-    <label for='clave'>Introduzca clave:</label>
+    <label for='clave'>&#128274; Introduzca clave:</label>
     <input type='password' name='clave'  required><br>
-    <label for='correo'>Introduzca correo:</label>
+    <label for='correo'>&#x1F4E7; Introduzca correo:</label>
     <input type='text' name='correo'  required><br>
-    <button type='submit'>Enviar</button>
-    
- <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 
+<div class="container">
 
+    <button class="button" type='submit'>Enviar</button>
+
+    <button class="button" onclick="location.href='./index.php'" > Volver</button>
+
+</div>
+    <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aqu si ya tienes cuenta</a> </center> 
+    <br>
 </form>
-<a href="inicioSesion.php">Inicie sesión aquí si ya tienes cuenta</a>
-<br>
-<a href="./index.php">Volver al Inicio</a>
+
 </body>
 
 </html>
