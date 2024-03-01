@@ -61,10 +61,9 @@
     </div>
 <?php endif; ?>
 
-
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1>Iniciar Sesión</h1>
-            <label for='usuario'class='username'>&#128100;  Usuario: </label>
+            <label for='usuario'class='username'>&#128100;Usuario: </label>
             <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
             <label for='clave'class='password'>&#128274; Contraseña: </label>
             <input type='password' name='clave' required> 
