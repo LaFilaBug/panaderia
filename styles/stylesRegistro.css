@@ -77,7 +77,10 @@ button:hover {
     /* Estilos del botón al pasar el ratón */
     background: #a74000;
 }
-
+.container {
+    display: flex;
+    justify-content: space-between;
+}
 .IrAinicio {
     /* Estilos del enlace de registro */
     display: inline-block; 

@@ -52,21 +52,33 @@
 </head>
 <body>
         
-        <?php if (isset($err)): ?>
-            <p class='incorrect'>Usuario o contraseña incorrectos</p>
-        <?php endif; ?>
+<!-- Este codigo lo he modificado para poder crear una ventana emergente y que se borre -->
+
+<?php if (isset($err)): ?>
+    <div id="error-container" class="error-container">
+        <p class="incorrect">Usuario o contraseña incorrectos</p>
+        <span id="close-btn" class="close-btn">&times;</span>
+    </div>
+<?php endif; ?>
+
+
         <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1>Iniciar Sesión</h1>
-            <label for='usuario'class='username'>Usuario: </label>
+            <label for='usuario'class='username'>&#128100;  Usuario: </label>
             <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
-            <label for='clave'class='password'>Contraseña: </label>
-             <input type='password' name='clave' required> 
-            <button type='submit'>Enviar</button>
+            <label for='clave'class='password'>&#128274; Contraseña: </label>
+            <input type='password' name='clave' required> 
 
-           <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
-        </form>
-        <a href='registro.php'>Regístrese para comenzar el pedido</a>
+        <div class="container">
+
+                <button class="button" type='submit'>Acceder</button>
+
+                <button class="button" onclick="location.href='./index.php'" > Volver</button>
+
+        </div>
         <br>
-        <a href="./index.php">Volver al inicio</a>
-</body>
+        
+        <center> <a href='registro.php' class="IrRegistro">Regístrese para comenzar el pedido</a> </center>
 </html>
+<script src="./scripts/jsErrorSesión.js"></script>
+
