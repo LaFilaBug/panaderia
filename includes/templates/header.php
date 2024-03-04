@@ -20,10 +20,6 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="styles/main.css" />
-    <style>
-
-
-    </style>
 </head>
 
 <body>
@@ -65,6 +61,14 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
             </div>
         </div>
     </nav>
+    <script>
+    function oscuridad() {
+            var body = document.body;
+            var navbar = document.querySelector('.navbar-default');
+            body.classList.toggle('dark-mode');
+            navbar.classList.toggle('dark-mode');
+        }
+    </script>
     <script src="/scripts/main.js"></script>
 </body>
 </html>
