@@ -25,6 +25,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
 <body>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
+
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -56,19 +57,13 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                     <?php if (isset($_SESSION['usuario'])) : ?>
                         <li><a href="index.php?logout=true">Cerrar sesión</a></li>
                     <?php endif; ?>
-                    <li><a><button class="dark" onclick="oscuridad()">🌙</button></a></li>
+                    <li><a><button class="darker" onclick="oscuridad()">🌙</button></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <script>
-    function oscuridad() {
-            var body = document.body;
-            var navbar = document.querySelector('.navbar-default');
-            body.classList.toggle('dark-mode');
-            navbar.classList.toggle('dark-mode');
-        }
-    </script>
+
     <script src="/scripts/main.js"></script>
 </body>
+
 </html>
