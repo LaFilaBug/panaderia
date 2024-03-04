@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['usuario'] && $_POST['nombre'] && $_POST['clave'] && $_POST['correo']) {
         $usuario = $_POST['usuario'];
         $nombre = $_POST['nombre'];
-        $clave = $_POST['clave'];
+        $clave = password_hash($_POST['clave'], PASSWORD_DEFAULT); //Hasheo de la contraseña
         $correo = $_POST['correo'];
 
         $stmt = $bd->prepare("SELECT COUNT(*) FROM usuarios WHERE usuario = ?");
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = $result->fetch_array(MYSQLI_NUM);
         $count = $row[0];
 
-        if ($count == 0) {   //Recuento de filas
+        if ($count == 0) {   
             $rol = "usuario";
             $consulta = $bd->prepare("INSERT INTO usuarios (usuario, nombre, clave, correo) VALUES (?, ?, ?, ?)");
             $consulta->bind_param("ssss", $usuario, $nombre, $clave, $correo);

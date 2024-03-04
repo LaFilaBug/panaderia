@@ -1,17 +1,19 @@
 <?php
      require 'includes/config/database.php';
 
-    function comprobar_usuario($usuario, $clave) {
+     function comprobar_usuario($usuario, $clave) {
         $bd = conectarDB();
-        $consulta = $bd->prepare("SELECT * FROM usuarios WHERE usuario = ? AND clave = ?");
-        $consulta->bind_param("ss", $usuario, $clave);
+        $consulta = $bd->prepare("SELECT * FROM usuarios WHERE usuario = ?");
+        $consulta->bind_param("s", $usuario);
         $consulta->execute();
         $resultado = $consulta->get_result();
         if ($resultado->num_rows > 0) {
-            return $resultado->fetch_assoc();
-        } else {
-            return false;
+            $usuario = $resultado->fetch_assoc();
+            if (password_verify($clave, $usuario['clave'])) {
+                return $usuario;
+            }
         }
+        return false;
     }
 
     if (isset($_GET['logout'])) {
