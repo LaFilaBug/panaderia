@@ -19,7 +19,11 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/index.css" />
+    <style>
+
+
+    </style>
 </head>
 
 <body>
@@ -56,6 +60,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                     <?php if (isset($_SESSION['usuario'])) : ?>
                         <li><a href="index.php?logout=true">Cerrar sesión</a></li>
                     <?php endif; ?>
+                    <li><a><button class="dark">🌙</button></a></li>
                 </ul>
             </div>
         </div>
