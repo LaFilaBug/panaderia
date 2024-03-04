@@ -1,9 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+/* stylesAdmin/crear.css */
 
 .container {
     max-width: 600px;
@@ -42,8 +37,28 @@ textarea {
     height: 100px;
 }
 
-input[type="file"] {
-    margin-top: 10px;
+/* Estilo para el botón de selección de archivos personalizado */
+.custom-file-input {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-file-input:hover {
+    background-color: #45a049;
+}
+
+.custom-file-input::before {
+    content: 'Seleccionar archivo'; /* Texto para el botón personalizado */
+}
+
+.custom-file-input:focus {
+    outline: none;
 }
 
 input[type="submit"] {

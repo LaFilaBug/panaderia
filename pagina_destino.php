@@ -18,22 +18,25 @@ if (isset($_GET['id'])) {
         // Muestra el producto
         ?>
         <body>
-            <div class="producto">
+            <div class="producto-destino">
                 <?php
                 if (!empty($producto['imagen'])) {
-                    echo "<div class='celda-imagen'><img class='imagen-producto' src='../imagenes/" . $producto['imagen'] . "'></div>";
+                    echo "<div class='celda-imagen-destino'><img class='imagen-producto-destino' src='../imagenes/" . $producto['imagen'] . "'></div>";
                 } else {
-                    echo "<div class='celda-imagen'><img class='imagen-producto' src='https://via.placeholder.com/150'></div>";
+                    echo "<div class='celda-imagen'-destino><img class='imagen-producto-destino' src='https://via.placeholder.com/150'></div>";
                 }
                 ?>
-                <div class="celda-nombre">
+                <div class="celda-nombre-destino">
                     <?= isset($producto['nombre']) ? $producto['nombre'] : '' ?>
                 </div>
-                <div class="celda-descripcion">
+                <div class="celda-descripcion-destino">
                     <?= isset($producto['descripcion']) ? $producto['descripcion'] : '' ?>
                 </div>
-                <div class="celda-precio">
+                <div class="celda-precio-destino">
                     <?= isset($producto['precio']) ? $producto['precio'] : '' ?>€
+                </div>
+                <div>
+                    <a href="menu.php">Volver al menú</a>
                 </div>
             </div>
         </body>
