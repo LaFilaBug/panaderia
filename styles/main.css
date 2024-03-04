@@ -58,18 +58,19 @@ body {
 }
 
 /*boton darkmode LAURITY*/
-/* .dark {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-radius: 5px;
+/* .dark{
+    background-color: #00000000;
+    border: none;
+    border-radius: 5px;
 } */
 /* MODO OSCURO DANIEL*/
-.oscuridad{
+.oscuridad {
   margin-top: 2%;
   margin-left: 10%;
   border-bottom: #000, 1px;
 }
-.dark{
+
+.dark {
   background-color: #000;
   color: #f1f1f1;
 }
