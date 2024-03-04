@@ -9,6 +9,7 @@ function listarPanaderia()
 
     $resultado = $consulta->get_result();
     ?>
+    <link rel="stylesheet" href="./styles/menuStyles.css">
     <div class="productos">
     <?php while ($row = $resultado->fetch_assoc()): ?>
         <div class="fila-producto">
