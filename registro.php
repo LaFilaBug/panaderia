@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nombre = $_POST['nombre'];
         $clave = password_hash($_POST['clave'], PASSWORD_DEFAULT); //Hasheo de la contraseña
         $correo = $_POST['correo'];
-
         $stmt = $bd->prepare("SELECT COUNT(*) FROM usuarios WHERE usuario = ?");
         $stmt->bind_param("s", $usuario);
         $stmt->execute();
