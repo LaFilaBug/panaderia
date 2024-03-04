@@ -50,7 +50,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles/stylesInicioSesion.css">
+    <link rel="stylesheet" href="styles/main.css">
 
 </head>        
 <!-- Este codigo lo he modificado para poder crear una ventana emergente y que se borre -->
