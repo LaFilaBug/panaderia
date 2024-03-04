@@ -27,7 +27,7 @@
 
 }
 
-h1 {
+.h1Inicio {
     /* Estilos del título */
     text-align: center;
     margin-bottom: 30px;
@@ -59,7 +59,7 @@ input:focus {
     border-bottom: 2px solid #ffdd00;
 }
 
-button {
+.buttonInicio {
     /* Estilos del botón */
     width: 40%;
     padding: 10px;
@@ -73,7 +73,7 @@ button {
     font-size: medium;
 }
 
-button:hover {
+.buttonInicio:hover {
     /* Estilos del botón al pasar el ratón */
     background: #a74000;
 }
@@ -88,7 +88,7 @@ button:hover {
     text-decoration: none;
     transition: transform 0.3s ease, text-decoration 0.3s ease; /* Añade transición */
 }
-.container {
+.containerInicio {
     display: flex;
     justify-content: space-between;
 }
