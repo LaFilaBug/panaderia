@@ -41,8 +41,6 @@ if (isset($_POST['borrar'])) {
     borrarProducto($id);
 }
 
-
-
 function listarPanaderia()
 {
     $bd = conectarDB();
@@ -52,11 +50,6 @@ function listarPanaderia()
     $resultado = $consulta->get_result();
     ?>
     <table>
-        <h1>Zona Admin</h1>
-        <h2>Hola,
-            <?php echo $_SESSION['nombre'] ?>
-        </h2>
-        <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php">Crear Producto</a></p>
         <thead>
         <tr>
             <th>Imagen</th>
@@ -106,13 +99,18 @@ function listarPanaderia()
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/admin.css">
+    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/admin.css">
     <title>Panadería</title>
 </head>
 
 <body>
+    <div class="header">
+        <h1>Zona Admin</h1>
+        <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
+        <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php" class="crear">Crear Producto</a>
+        <a href='../../index.php?logout=true' class='logout'>Cerrar Sesión</a></p>
+    </div>
     <?php listarPanaderia(); ?>
-    <a href='../../index.php?logout=true'>Cerrar Sesión</a>
+  
 </body>
-
 </html>
