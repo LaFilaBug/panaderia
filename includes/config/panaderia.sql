@@ -65,7 +65,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Baguette ','Nuestra Baguette elaborada al estilo tradicional con ingredientes de alta calidad, sigue la auténtica receta francesa y te ofrece una crujiente corteza dorada y una miga suave y esponjosa.',2.75,1,_binary '3648799674.jpeg'),(2,'Hogaza de Horno','La hogaza de harina de trigo sarraceno amasada a mano de forma artesanal y horneada lentamente en horno de leña está creada para aquellos que quieren rememorar sabores tradicionales.',4.20,1,''),(3,'Tarta de Chocolate','Deliciosa tarta de chocolate con una basd de galleta crujiente, rellena de crema de chocolate suave.',20.99,2,''),(4,'Tarta de Fresa','Tarta fresca con una base de masa quebrada, rellena de crema de fresa y decorada con frutas frescas.',18.99,2,''),(5,'Pastel de Limón','Una combinación perfecta de dulce y ácido, con una suave crema de limón sobre una base de galleta.',22.99,3,''),(6,'Pastel de Zanahoria','Pastel jugoso con trozos de zanahoria, nueces y canela, cubierto con un delicioso glaseado de queso de crema',17.55,3,'');
+INSERT INTO `productos` VALUES (1,'Baguette ','Nuestra Baguette elaborada al estilo tradicional con ingredientes de alta calidad, sigue la auténtica receta francesa y te ofrece una crujiente corteza dorada y una miga suave y esponjosa.',2.75,1,_binary 'baguette.png'),(2,'Hogaza de Horno','La hogaza de harina de trigo sarraceno amasada a mano de forma artesanal y horneada lentamente en horno de leña está creada para aquellos que quieren rememorar sabores tradicionales.',4.20,1,_binary 'hogaza.png'),(3,'Tarta de Chocolate','Deliciosa tarta de chocolate con una basd de galleta crujiente, rellena de crema de chocolate suave.',20.99,2,_binary 'TartaChoco.png'),(4,'Tarta de Fresa','Tarta fresca con una base de masa quebrada, rellena de crema de fresa y decorada con frutas frescas.',18.99,2,_binary 'tartaFresa.png'),(5,'Pastel de Limón','Una combinación perfecta de dulce y ácido, con una suave crema de limón sobre una base de galleta.',22.99,3,_binary 'pastelLimon.png'),(6,'Pastel de Zanahoria','Pastel jugoso con trozos de zanahoria, nueces y canela, cubierto con un delicioso glaseado de queso de crema',17.55,3,_binary 'pastelZanahoria.png');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-04  9:34:20
+-- Dump completed on 2024-03-04 10:56:15
