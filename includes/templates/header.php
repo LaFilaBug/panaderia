@@ -23,7 +23,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <style>
 
 
-    </style>
+    </style> -->
 </head>
 
 <body>
@@ -60,10 +60,11 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                     <?php if (isset($_SESSION['usuario'])) : ?>
                         <li><a href="index.php?logout=true">Cerrar sesión</a></li>
                     <?php endif; ?>
-                    <li><a><button class="dark">🌙</button></a></li>
+                    <li><a><button class="dark" onclick="oscuridad()">🌙</button></a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

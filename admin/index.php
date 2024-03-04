@@ -57,6 +57,15 @@ function listarPanaderia()
             <?php echo $_SESSION['nombre'] ?>
         </h2>
         <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php">Crear Producto</a></p>
+        <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
         <?php while ($row = $resultado->fetch_assoc()): ?>
             <tr>
                 <?php

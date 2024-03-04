@@ -52,11 +52,11 @@ CREATE TABLE `productos` (
   `descripcion` varchar(255) DEFAULT NULL,
   `precio` decimal(4,2) DEFAULT NULL,
   `categorias_id` int NOT NULL,
-  `imagen` longblob,
+  `imagen` longblob NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_Productos_Categorias_idx` (`categorias_id`),
   CONSTRAINT `fk_Productos_Categorias` FOREIGN KEY (`categorias_id`) REFERENCES `categorias` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'Baguette ','Nuestra Baguette elaborada al estilo tradicional con ingredientes de alta calidad, sigue la auténtica receta francesa y te ofrece una crujiente corteza dorada y una miga suave y esponjosa.',2.75,1,NULL),(2,'Hogaza de Horno','La hogaza de harina de trigo sarraceno amasada a mano de forma artesanal y horneada lentamente en horno de leña está creada para aquellos que quieren rememorar sabores tradicionales.',4.20,1,NULL),(3,'Tarta de Chocolate','Deliciosa tarta de chocolate con una basd de galleta crujiente, rellena de crema de chocolate suave.',20.99,2,NULL),(4,'Tarta de Fresa','Tarta fresca con una base de masa quebrada, rellena de crema de fresa y decorada con frutas frescas.',18.99,2,NULL),(5,'Pastel de Limón','Una combinación perfecta de dulce y ácido, con una suave crema de limón sobre una base de galleta.',22.99,3,NULL),(6,'Pastel de Zanahoria','Pastel jugoso con trozos de zanahoria, nueces y canela, cubierto con un delicioso glaseado de queso de crema.',17.55,3,NULL);
+INSERT INTO `productos` VALUES (1,'Baguette ','Nuestra Baguette elaborada al estilo tradicional con ingredientes de alta calidad, sigue la auténtica receta francesa y te ofrece una crujiente corteza dorada y una miga suave y esponjosa.',2.75,1,_binary '3648799674.jpeg'),(2,'Hogaza de Horno','La hogaza de harina de trigo sarraceno amasada a mano de forma artesanal y horneada lentamente en horno de leña está creada para aquellos que quieren rememorar sabores tradicionales.',4.20,1,''),(3,'Tarta de Chocolate','Deliciosa tarta de chocolate con una basd de galleta crujiente, rellena de crema de chocolate suave.',20.99,2,''),(4,'Tarta de Fresa','Tarta fresca con una base de masa quebrada, rellena de crema de fresa y decorada con frutas frescas.',18.99,2,''),(5,'Pastel de Limón','Una combinación perfecta de dulce y ácido, con una suave crema de limón sobre una base de galleta.',22.99,3,''),(6,'Pastel de Zanahoria','Pastel jugoso con trozos de zanahoria, nueces y canela, cubierto con un delicioso glaseado de queso de crema',17.55,3,'');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,10 +80,10 @@ CREATE TABLE `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
   `usuario` varchar(45) DEFAULT NULL,
-  `clave` varchar(45) DEFAULT NULL,
+  `clave` varchar(60) DEFAULT NULL,
   `correo` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +92,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Admin','admin','admin','admin@admin.com'),(2,'random','random','1234','random@random.es'),(9,'hola','hola','1234','sdsd@sds.es'),(10,'laura','laura','1234','laura@larafd.es'),(11,'lasad','aaa','1234','asa@wdad.es');
+INSERT INTO `usuarios` VALUES (1,'Admin','admin','$2y$10$WnakCH.Lq1ZFGYPNCkeyQen5hWAYzWxgtN88bGUWTt1em0yGG5.dC','admin@admin.com'),(14,'Pepe','pepe','$2y$10$JkCRc7O6xXI2/p5pvQcM9uN6K5VzW8QHMfvULgmft6bUEQKDIxgNe','pepe@ep');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -105,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-26 18:33:18
+-- Dump completed on 2024-03-04  9:34:20
