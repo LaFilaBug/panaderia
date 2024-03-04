@@ -92,7 +92,6 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Admin','admin','admin','admin@admin.com'),(2,'random','random','1234','random@random.es'),(9,'hola','hola','1234','sdsd@sds.es'),(10,'laura','laura','1234','laura@larafd.es'),(11,'lasad','aaa','1234','asa@wdad.es');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
