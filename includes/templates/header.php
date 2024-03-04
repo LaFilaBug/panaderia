@@ -23,7 +23,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <style>
 
 
-    </style> -->
+    </style>
 </head>
 
 <body>
