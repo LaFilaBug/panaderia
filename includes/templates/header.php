@@ -21,49 +21,8 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="styles/index.css" />
     <style>
-        .esconde {
-            display: none;
-        }
-        .productos {
-            display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.fila-producto {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
 
-.celda-imagen {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
 
-.imagen-producto {
-    width: 100%;
-    height: auto;
-}
-
-.celda-nombre, .celda-descripcion, .celda-precio {
-    padding: 10px;
-    text-align: center;
-}
-
-@media (max-width: 800px) {
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .productos {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
     </style>
 </head>
 
@@ -101,6 +60,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                     <?php if (isset($_SESSION['usuario'])) : ?>
                         <li><a href="index.php?logout=true">Cerrar sesión</a></li>
                     <?php endif; ?>
+                    <li><a><button class="dark">🌙</button></a></li>
                 </ul>
             </div>
         </div>
