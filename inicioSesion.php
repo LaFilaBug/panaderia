@@ -50,7 +50,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="styles/stylesInicioSesion.css">
+    <link rel="stylesheet" href="styles/main.css">
 
 </head>        
 <!-- Este codigo lo he modificado para poder crear una ventana emergente y que se borre -->
@@ -64,18 +64,18 @@
 <?php endif; ?>
 
 
-        <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
-        <h1>Iniciar Sesión</h1>
-            <label for='usuario'class='username'>&#128100;  Usuario: </label>
-            <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
-            <label for='clave'class='password'>&#128274; Contraseña: </label>
-            <input type='password' name='clave' required> 
+        <form class='formInicio' action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
+        <h1 class="h1Inicio">Iniciar Sesión</h1>
+            <label for='usuario'class='labelInicio'>&#128100;  Usuario: </label>
+            <input class='inputInicio' value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
+            <label for='clave'class='labelInicio'>&#128274; Contraseña: </label>
+            <input class='inputInicio' type='password' name='clave' required> 
 
-        <div class="container">
+        <div class="containerInicio">
 
-                <button class="button" type='submit'>Acceder</button>
+                <button class="buttonInicio" type='submit'>Acceder</button>
 
-                <button class="button" onclick="location.href='./index.php'" > Volver</button>
+                <button class="buttonInicio" onclick="location.href='./index.php'" > Volver</button>
 
         </div>
         <br>
