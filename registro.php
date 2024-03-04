@@ -1,7 +1,8 @@
 <?php
- require 'includes/config/database.php';
+require 'includes/config/database.php';
 
 $bd = conectarDB();
+$err = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['usuario'] && $_POST['nombre'] && $_POST['clave'] && $_POST['correo']) {
@@ -31,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         } else {
             $err = true;
-            echo "El nombre de usuario ya está en uso. Por favor, elija otro.";
         }
     }
 }
@@ -48,30 +48,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <?php if ($err): ?>
+        <div id="error-container" class="error-container">
+            <p class="incorrect">El nombre de usuario ya está en uso. Por favor, elija otro.</p>
+            <span id="close-btn" class="close-btn">&times;</span>
+        </div>
+    <?php endif; ?>
 
-<form method='POST'>
-    <h1>REGISTRO</h1>
-    <label for='nombre'>&#x1F464; Introduzca nombre:</label>
-    <input type='text' name='nombre' required><br>
-    <label for='usuario'>&#128100; Introduzca nombre usuario:</label>
-    <input type='text' name='usuario' required><br>
-    <label for='clave'>&#128274; Introduzca clave:</label>
-    <input type='password' name='clave'  required><br>
-    <label for='correo'>&#x1F4E7; Introduzca correo:</label>
-    <input type='text' name='correo'  required><br>
+    <form method='POST'>
+        <h1>REGISTRO</h1>
+        <label for='nombre'>&#x1F464; Introduzca nombre:</label>
+        <input type='text' name='nombre' required><br>
+        <label for='usuario'>&#128100; Introduzca nombre usuario:</label>
+        <input type='text' name='usuario' required><br>
+        <label for='clave'>&#128274; Introduzca clave:</label>
+        <input type='password' name='clave'  required><br>
+        <label for='correo'>&#x1F4E7; Introduzca correo:</label>
+        <input type='text' name='correo'  required><br>
 
-    <div class="container">
+        <div class="container">
+            <button class="button" type='submit'>Enviar</button>
+            <button class="button" onclick="location.href='./index.php'" > Volver</button>
+        </div>
 
-        <button class="button" type='submit'>Enviar</button>
+        <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 
+    </form>
 
-        <button class="button" onclick="location.href='./index.php'" > Volver</button>
-
-    </div>
-
-    <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 
-    
-
-</form>
+    <script>
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('error-container').style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>

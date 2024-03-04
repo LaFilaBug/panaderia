@@ -98,3 +98,31 @@ button:hover {
     transform: scale(1.2); /* Aumenta el tamaño del enlace */
 }
 
+/* Estilos de la ventana emergente de error */
+
+.error-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2dede;
+    padding: 20px;
+    border: 1px solid #ebccd1;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #a94442;
+}
