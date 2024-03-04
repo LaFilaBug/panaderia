@@ -34,13 +34,13 @@
     color: #333;
 }
 
-label {
+.labelInicio {
     /* Estilos de las etiquetas */
     display: block;
     margin-bottom: 5px;
     color: #666;
 }
-input {
+.inputInicio {
       /* Estilos de los campos de entrada */
       width: 90%; /* Ajusta el ancho */
       margin: 0 auto; /* Añade márgenes automáticos */
@@ -54,7 +54,7 @@ input {
       outline: none; /* Elimina el contorno al seleccionar el campo de entrada */
 }
 
-input:focus {
+.inputInicio:focus {
     /* Cambia el color de la línea inferior cuando el campo de entrada está enfocado */
     border-bottom: 2px solid #ffdd00;
 }

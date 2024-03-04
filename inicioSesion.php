@@ -66,10 +66,10 @@
 
         <form class='formInicio' action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='POST'>
         <h1 class="h1Inicio">Iniciar Sesión</h1>
-            <label for='usuario'class='username'>&#128100;  Usuario: </label>
-            <input value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
-            <label for='clave'class='password'>&#128274; Contraseña: </label>
-            <input type='password' name='clave' required> 
+            <label for='usuario'class='labelInicio'>&#128100;  Usuario: </label>
+            <input class='inputInicio' value='<?= isset($usuario) ? $usuario : '' ?>' name='usuario'required> 
+            <label for='clave'class='labelInicio'>&#128274; Contraseña: </label>
+            <input class='inputInicio' type='password' name='clave' required> 
 
         <div class="containerInicio">
 
