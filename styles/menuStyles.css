@@ -1,0 +1,34 @@
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fila-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    align-items: flex-end; /* Alinea los elementos hijos al final del contenedor */
+}
+.celda-imagen img {
+    width: 100%;
+    height: auto;
+}
+.celda-nombre, .celda-descripcion, .celda-precio {
+    margin: 10px 0;
+    text-align: justify; /* Justifica el texto */
+}
+.celda-boton {
+    text-align: center;
+}
+.celda-boton a {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    height: 40px; /* Asegura que todos los botones tengan la misma altura */
+    width: 100px; /* Asegura que todos los botones tengan la misma anchura */
+    text-align: center; /* Centra el texto dentro del botón */
+}
