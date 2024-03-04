@@ -44,9 +44,20 @@
     display: none;
   }
 
-  /*boton darkmode*/
-  .dark{
+  /*boton darkmode LAURITY*/
+  /* .dark{
     background-color: #00000000;
     border: none;
     border-radius: 5px;
+} */
+
+/* MODO OSCURO DANIEL*/
+.oscuridad{
+  margin-top: 2%;
+  margin-left: 10%;
+  border-bottom: #000, 1px;
+}
+.dark{
+  background-color: #000;
+  color: #f1f1f1;
 }
