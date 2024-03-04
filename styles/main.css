@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -56,18 +58,19 @@ body {
 }
 
 /*boton darkmode LAURITY*/
-/* .dark {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-radius: 5px;
+/* .dark{
+    background-color: #00000000;
+    border: none;
+    border-radius: 5px;
 } */
 /* MODO OSCURO DANIEL*/
-.oscuridad{
+.oscuridad {
   margin-top: 2%;
   margin-left: 10%;
   border-bottom: #000, 1px;
 }
-.dark{
+
+.dark {
   background-color: #000;
   color: #f1f1f1;
 }
@@ -244,6 +247,131 @@ iframe {
   margin: 0;
   padding: 0;
   margin-top: -1.5%;
+}
+
+.inicioSesion {
+  /* Crea un degradado de fondo */
+  /* background: linear-gradient(to right, #ffbe45, #96bb00e2); */
+  background-image: url("../assets/images/fondoRegistro.jpg");
+  background-position: center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.formInicio {
+  /* Estilos del formulario */
+  background: #fff;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.h1Inicio {
+  /* Estilos del título */
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.labelInicio {
+  /* Estilos de las etiquetas */
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.inputInicio {
+  /* Estilos de los campos de entrada */
+  width: 90%; /* Ajusta el ancho */
+  margin: 0 auto; /* Añade márgenes automáticos */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none; /* Elimina el borde */
+  border-bottom: 2px solid #ddd; /* Agrega una línea inferior */
+  border-radius: 0; /* Elimina los bordes redondeados */
+  font-size: 14px;
+  background: transparent; /* Hace que el fondo sea transparente */
+  outline: none; /* Elimina el contorno al seleccionar el campo de entrada */
+}
+
+.inputInicio:focus {
+  /* Cambia el color de la línea inferior cuando el campo de entrada está enfocado */
+  border-bottom: 2px solid #ffdd00;
+}
+
+.buttonInicio {
+  /* Estilos del botón */
+  width: 40%;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(to right, #ffbe45, rgba(216, 115, 0, 0.8862745098));
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: medium;
+}
+
+.buttonInicio:hover {
+  /* Estilos del botón al pasar el ratón */
+  background: #a74000;
+}
+
+.IrRegistro {
+  /* Estilos del enlace de registro */
+  display: inline-block;
+  animation: pulse 2s infinite;
+  text-align: center;
+  margin-top: 20px;
+  color: #ff9d00;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-decoration 0.3s ease; /* Añade transición */
+}
+
+.containerInicio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.IrRegistro:hover {
+  /* Estilos del enlace de registro al pasar el ratón */
+  text-decoration: none !important; /* Elimina la línea debajo del enlace */
+  transform: scale(1.2); /* Aumenta el tamaño del enlace */
+}
+
+/* Errores de inicio de sesion */
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2dede; /* Color de fondo para el contenedor de error */
+  padding: 20px;
+  border: 1px solid #ebccd1; /* Borde para el contenedor de error */
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000; /* Asegura que el contenedor de error esté por encima de otros elementos */
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #a94442; /* Color del botón de cerrar */
 }
 
 /*# sourceMappingURL=main.css.map */
