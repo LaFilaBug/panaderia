@@ -57,25 +57,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="/styles/stylesAdmin/actualizar.css">
     <title>Editar Producto</title>
 </head>
-<body>
-    <h1>Editar Producto</h1>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $idProducto); ?>" method="post" enctype="multipart/form-data">
-    <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required value="<?php echo htmlspecialchars($producto['nombre']); ?>">
+<body class="body-class">
+    <h1 class="title-class">Editar Producto</h1>
+    <form class="form-class" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $idProducto); ?>" method="post" enctype="multipart/form-data">
+    <label class="label-class" for="nombre">Nombre:</label>
+        <input class="input-class" type="text" id="nombre" name="nombre" required value="<?php echo htmlspecialchars($producto['nombre']); ?>">
 
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required><?php echo htmlspecialchars($producto['descripcion']); ?></textarea>
+        <label class="label-class" for="descripcion">Descripción:</label>
+        <textarea class="textarea-class" id="descripcion" name="descripcion" required><?php echo htmlspecialchars($producto['descripcion']); ?></textarea>
 
-        <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" step="0.01" required value="<?php echo htmlspecialchars($producto['precio']); ?>">
+        <label class="label-class" for="precio">Precio:</label>
+        <input class="input-class" type="number" id="precio" name="precio" step="0.01" required value="<?php echo htmlspecialchars($producto['precio']); ?>">
 
-        <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" required>
-        <input type="submit" value="Guardar Cambios">
+        <label class="label-class" for="imagen">Imagen:</label>
+        <input class="input-file-class" type="file" id="imagen" name="imagen" required>
+        <input class="submit-class" type="submit" value="Guardar Cambios">
         <br>
-        <a href="../index.php">Volver</a>
+        <a class="link-class" href="../index.php">Volver</a>
     </form>
 </body>
 </html>
