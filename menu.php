@@ -9,12 +9,13 @@ function listarPanaderia()
 
     $resultado = $consulta->get_result();
     ?>
+    <link rel="stylesheet" href="./styles/menuStyles.css">
     <div class="productos">
     <?php while ($row = $resultado->fetch_assoc()): ?>
         <div class="fila-producto">
             <?php
             if (!empty($row['imagen'])) {
-                echo "<div class='celda-imagen'><img class='imagen-producto' src='../imagenes/" . $row['imagen'] . "'></div>";
+                echo "<div class='celda-imagen'><img class='imagen-producto' src='  ./imagenes/" . $row['imagen'] . "'></div>";
             } else {
                 echo "<div class='celda-imagen'><img class='imagen-producto' src='https://via.placeholder.com/150'></div>";
             }
@@ -29,10 +30,9 @@ function listarPanaderia()
                 <?= $row['precio'] ?>€
             </div>
             <div class="celda-boton">
-            <a href="pagina_destino.php?id=<?= $row['id'] ?>" class="btn">                    <div class="celda-boton">
-                        Ver más
-                    </div>
-                </a>
+                <a href="pagina_destino.php?id=<?= $row['id'] ?>" class="btn-menu">                    
+                <div class="celda-boton-menu">    Ver más   </div>
+                    </a>
             </div>
         </div>
     <?php endwhile; ?>

@@ -41,8 +41,6 @@ if (isset($_POST['borrar'])) {
     borrarProducto($id);
 }
 
-
-
 function listarPanaderia()
 {
     $bd = conectarDB();
@@ -52,11 +50,15 @@ function listarPanaderia()
     $resultado = $consulta->get_result();
     ?>
     <table>
-        <h1>Zona Admin</h1>
-        <h2>Hola,
-            <?php echo $_SESSION['nombre'] ?>
-        </h2>
-        <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php">Crear Producto</a></p>
+        <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
         <?php while ($row = $resultado->fetch_assoc()): ?>
             <tr>
                 <?php
@@ -76,10 +78,10 @@ function listarPanaderia()
                     <?= $row['precio'] ?>€
                 </td>
                 <td>
-                    <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
-                        <input type='hidden' name='id' value='<?= $row['id'] ?>'>
-                        <button type='submit' class='edit' name='editar'>Editar</button>
-                    </form>
+                <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
+    <input type='hidden' name='id' value='<?= $row['id'] ?>'>
+    <button type='submit' class='edit' name='editar'>Editar</button>
+</form>
 
                     <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='post' style='display: inline;'>
                         <input type='hidden' name='id' value='<?= $row['id'] ?>'>
@@ -97,13 +99,18 @@ function listarPanaderia()
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/admin.css">
+    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/admin.css">
     <title>Panadería</title>
 </head>
 
 <body>
+    <div class="header">
+        <h1>Zona Admin</h1>
+        <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
+        <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php" class="crear">Crear Producto</a>
+        <a href='./../index.php?logout=true' class='logout'>Cerrar Sesión</a></p>
+    </div>
     <?php listarPanaderia(); ?>
-    <a href='../../index.php?logout=true'>Cerrar Sesión</a>
+  
 </body>
-
 </html>

@@ -55,30 +55,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link rel="stylesheet" type="text/css" href="/styles/stylesAdmin/crear.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Zona Admin CREAR</h1>
-        <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
-        <form action="" method="post" enctype="multipart/form-data">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+    <div class="admin-container">
+        <h1 class="admin-title">Zona Admin CREAR</h1>
+        <h2 class="admin-welcome-message">Hola, <?php echo $_SESSION['nombre'] ?></h2>
+        <form action="" method="post" enctype="multipart/form-data" class="admin-product-form">
+            <label for="nombre" class="admin-product-form-label">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required class="admin-product-form-input">
 
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" required></textarea>
+            <label for="descripcion" class="admin-product-form-label">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required class="admin-product-form-textarea"></textarea>
 
-            <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" step="0.01" required>
+            <label for="precio" class="admin-product-form-label">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required class="admin-product-form-input">
 
-            <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" required>
+            <label for="categoria" class="admin-product-form-label">Categoría:</label>
+            <select id="categoria" name="categoria" required class="admin-product-form-select">
                 <?php foreach ($categorias as $categoria): ?>
                     <option value="<?= $categoria['id'] ?>"><?= $categoria['nombre'] ?></option>
                 <?php endforeach; ?>
             </select>
 
-            <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" name="imagen" required>
+            <label for="imagen" class="admin-product-form-label">Imagen:</label>
+            <input type="file" id="imagen" name="imagen" required class="admin-product-form-input-file">
 
-            <input type="submit" value="Guardar Producto">
+            <input type="submit" value="Guardar Producto" class="admin-product-form-submit">
         </form>
     </div>
 </body>

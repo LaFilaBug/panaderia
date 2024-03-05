@@ -35,7 +35,7 @@
             $_SESSION['usuario'] = $_POST["usuario"];
             $_SESSION['nombre'] = $usu['nombre'];
 
-            if ($_POST["usuario"] === 'admin') {
+            if (strtolower($_POST["usuario"] === 'admin')){
                 header("Location: ./admin/index.php");
             }
             else {

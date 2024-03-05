@@ -9,7 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-image: url("https://res.cloudinary.com/dbqqjaqqa/image/upload/v1490097089/bg_ftta6d.png");
-  color: #49130c;
+  color: #000000;
 }
 
 .navbar {
@@ -41,11 +41,14 @@ body {
     line-height: 27px;
   }
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .open > a {
   background-color: #e6637f;
 }
 
-.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
   background-color: #F2D4A7;
 }
 
@@ -57,11 +60,30 @@ body {
   display: none;
 }
 
-/*boton darkmode*/
+/*boton darkmode LAURITY*/
+/* .dark{
+    background-color: #00000000;
+    border: none;
+    border-radius: 5px;
+} */
+/* MODO OSCURO DANIEL*/
+/*Somos los congitos (boton oscuro)by Adri*/
 .dark {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  border-radius: 5px;
+  background-color: #000000;
+  background-image: url("/imagenes/negro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+.dark .celda-nombre,
+.dark .celda-descripcion,
+.dark .celda-precio {
+  color: #000 !important;
+}
+
+.darker {
+  background: rgba(0, 0, 0, 0);
+  border-style: none;
 }
 
 .parrafo {
@@ -235,7 +257,6 @@ iframe {
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-top: -1.5%;
 }
 
 .inicioSesion {

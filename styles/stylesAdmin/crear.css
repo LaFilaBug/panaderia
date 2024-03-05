@@ -1,75 +1,94 @@
-/* stylesAdmin/crear.css */
 
-.container {
-    max-width: 600px;
-    margin: 20px auto;
+.admin-container {
+    font-family: Arial, sans-serif;
+    width: 40%;
+    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
-h1 {
-    font-size: 24px;
+/* Estilos para el formulario de producto */
+.admin-product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-title {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-label {
+.admin-welcome-message {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el formulario de producto */
+.admin-product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admin-product-form-label {
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="number"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
 }
 
-textarea {
-    height: 100px;
-}
-
-/* Estilo para el botón de selección de archivos personalizado */
-.custom-file-input {
+.admin-product-form-input,
+.admin-product-form-textarea,
+.admin-product-form-select,
+.admin-product-form-input-file {
     width: 100%;
     padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
+    margin-bottom: 20px;
     border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+    border: 1px solid #ccc;
 }
 
-.custom-file-input:hover {
-    background-color: #45a049;
-}
-
-.custom-file-input::before {
-    content: 'Seleccionar archivo'; /* Texto para el botón personalizado */
-}
-
-.custom-file-input:focus {
-    outline: none;
-}
-
-input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
+.admin-product-form-submit {
+    font-size: larger;
     padding: 10px 20px;
+    border: none;
+    background-color: #ffc400;
+    color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+@media (max-width: 600px) {
+    .admin-container {
+        width: 95%;
+    }
+
+    .admin-title {
+        font-size: 1.5em;
+    }
+
+    .admin-product-form {
+        padding: 10px;
+    }
+
+    .admin-product-form-input,
+    .admin-product-form-textarea,
+    .admin-product-form-select,
+    .admin-product-form-input-file {
+        padding: 5px;
+    }
 }

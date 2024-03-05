@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.bodyRegistro {
+    /* Crea un degradado de fondo */
+    /* background: linear-gradient(to right, #ffbe45, #96bb00e2); */
+    background-image: url('../assets/images/fondoRegistro.jpg');
+    background-position: center;
+    background-size: cover;
+
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.formRegistro {
+    /* Estilos del formulario */
+    background: #fff;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+
+}
+
+.h1Registro {
+    /* Estilos del título */
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.labelRegistro {
+    /* Estilos de las etiquetas */
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+.inputRegistro {
+      /* Estilos de los campos de entrada */
+      width: 90%; /* Ajusta el ancho */
+      margin: 0 auto; /* Añade márgenes automáticos */
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none; /* Elimina el borde */
+      border-bottom: 2px solid #ddd; /* Agrega una línea inferior */
+      border-radius: 0; /* Elimina los bordes redondeados */
+      font-size: 14px;
+      background: transparent; /* Hace que el fondo sea transparente */
+      outline: none; /* Elimina el contorno al seleccionar el campo de entrada */
+}
+
+.inputRegistro:focus {
+    /* Cambia el color de la línea inferior cuando el campo de entrada está enfocado */
+    border-bottom: 2px solid #ffdd00;
+}
+
+.buttonRegistro {
+    /* Estilos del botón */
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background: linear-gradient(to right, #ffbe45, #d87300e2);
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.buttonRegistro:hover {
+    /* Estilos del botón al pasar el ratón */
+    background: #a74000;
+}
+.containerRegistro {
+    display: flex;
+    justify-content: space-between;
+}
+.IrAinicio {
+    /* Estilos del enlace de registro */
+    display: inline-block; 
+    animation: pulse 2s infinite; 
+    text-align: center;
+    margin-top: 20px;
+    color: #ff9d00;
+    text-decoration: none;
+    transition: transform 0.3s ease, text-decoration 0.3s ease; /* Añade transición */
+}
+
+.IrAinicio:hover {
+    /* Estilos del enlace de registro al pasar el ratón */
+    text-decoration: none ; /* Elimina la línea debajo del enlace */
+    transform: scale(1.2); /* Aumenta el tamaño del enlace */
+}
+
+/* Estilos de la ventana emergente de error */
+

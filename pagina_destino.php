@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título de tu página</title>
+    <link rel="stylesheet" type="text/css" href="./styles/paginaDestino.css">
+</head>
+<body>
+
 <?php
 include 'includes/config/database.php';
 include 'includes/templates/header.php';
@@ -50,3 +58,6 @@ if (isset($_GET['id'])) {
 
 include 'includes/templates/footer.php';
 ?>
+
+</body>
+</html>

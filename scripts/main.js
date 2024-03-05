@@ -22,13 +22,25 @@ window.addEventListener("resize", function () {
   }
 });
 
-
-function darkMode() {
+// BOTON OSCURO LAURITY
+/* function darkMode() {
   const botonDarkMode = document.querySelector("#dark-mode");
   const body = document.querySelector("body");
   botonDarkMode.addEventListener("click", () => {
     body.classList.toggle("dark-mode");
   });
+} */
+
+// BOTON OSCURO daniel
+// function oscuridad() {
+//   let element = document.body;
+//   element.classList.toggle("dark");
+// }
+
+/*Boton DarkTheme Adri*/
+function oscuridad() {
+  var body = document.querySelector('body');
+  body.classList.toggle('dark');
 }
 
 
