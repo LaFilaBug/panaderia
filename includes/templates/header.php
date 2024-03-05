@@ -65,6 +65,12 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
             </div>
         </div>
     </nav>
-    <script src="/scripts/main.js"></script>
+    <script>
+        function oscuridad() {
+  let element = document.body;
+  element.classList.toggle("dark");
+}
+
+    </script>
 </body>
 </html>
