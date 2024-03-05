@@ -30,10 +30,9 @@ function listarPanaderia()
                 <?= $row['precio'] ?>€
             </div>
             <div class="celda-boton">
-            <a href="pagina_destino.php?id=<?= $row['id'] ?>" class="btn">                    <div class="celda-boton">
-                        Ver más
-                    </div>
-                </a>
+                <a href="pagina_destino.php?id=<?= $row['id'] ?>" class="btn-menu">                    
+                <div class="celda-boton-menu">    Ver más   </div>
+                    </a>
             </div>
         </div>
     <?php endwhile; ?>
