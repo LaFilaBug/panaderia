@@ -108,7 +108,7 @@ function listarPanaderia()
         <h1>Zona Admin</h1>
         <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
         <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php" class="crear">Crear Producto</a>
-        <a href='../../index.php?logout=true' class='logout'>Cerrar Sesión</a></p>
+        <a href='./../index.php?logout=true' class='logout'>Cerrar Sesión</a></p>
     </div>
     <?php listarPanaderia(); ?>
   
