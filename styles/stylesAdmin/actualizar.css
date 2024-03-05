@@ -1,56 +1,65 @@
-.body-class {
+/* Estilos base */
+.product-edit-body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     padding: 20px;
 }
 
-.title-class {
-    text-align: center;
-    color: #333;
-}
-
-.form-class {
-    background-color: #fff;
-    border-radius: 10px;
-    max-width: 500px;
+.product-edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
-.label-class {
+.product-edit-label {
     display: block;
-    margin: 10px 0;
-    color: #333;
+    margin-bottom: 10px;
+    text-align: left; /* Cambiado de center a left */
+    width: 100%;
 }
 
-.input-class, .textarea-class {
+.product-edit-input,
+.product-edit-textarea,
+.product-edit-input-file {
     width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 }
 
-.submit-class {
-    display: block;
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 14px 20px;
-    margin: 10px 0;
+.product-edit-submit {
+    font-size: larger;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    background-color:  #ffc400;
+    color: #ffffff;
+    border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    margin-top: 10px;
 }
 
-.submit-class:hover {
-    background-color: #45a049;
-}
-
-.link-class {
-    display: block;
-    text-align: center;
-    margin: 15px 0;
+.product-edit-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffc400;
     text-decoration: none;
-    color: #333;
+}
+
+/* Estilos para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+    .product-edit-form {
+        padding: 10px;
+    }
+
+    .product-edit-input,
+    .product-edit-textarea,
+    .product-edit-input-file {
+        padding: 5px;
+    }
 }
