@@ -14,13 +14,13 @@
     justify-content: space-between;
     border: 1px solid #ccc;
     margin-bottom: 20px;
-    padding: 20px; /* Disminuye esto para reducir la separación entre los elementos */
+    padding: 20px;
     width: calc(33.33% - 20px);
-    align-items: stretch;/* Cambia esto a 'stretch' para hacer que los elementos ocupen todo el ancho */
+    align-items: stretch;
 }
 
 .fila-producto > * {
-    flex-grow: 0.5; /* Añade esto para hacer que los elementos ocupen todo el espacio disponible */
+    flex-grow: 0.5; 
 }
 
 .celda-imagen {
@@ -41,15 +41,27 @@
     text-align: justify; 
 }
 
+
+.celda-boton a.btn-menu {
+    background-color: #ecba06;
+    color: #fff; 
+    border-radius: 10px; 
+    padding: 5px 10px;
+    text-decoration: none; 
+    display: inline-block; 
+   
+}
 .celda-boton {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.celda-boton a.btn-menu:hover {
+    
+    background-color: #ce8922; 
 }
 
-.celda-boton a {
-    background-color: #e6b617;
-    color: white;
-    padding: 10px 20px;
-    height: 40px; 
-    width: 100px; 
-    text-align: center; 
+.celda-boton-menu {
+    padding: 10px;
+    
 }

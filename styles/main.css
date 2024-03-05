@@ -70,7 +70,15 @@ body {
 /*Somos los congitos (boton oscuro)by Adri*/
 .dark {
   background-color: #000000;
-  background-image: url("/imagenes/puntos_negros.jpg");
+  background-image: url("/imagenes/negro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+.dark .celda-nombre,
+.dark .celda-descripcion,
+.dark .celda-precio {
+  color: #000 !important;
 }
 
 .darker {
