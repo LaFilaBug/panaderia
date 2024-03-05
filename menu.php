@@ -15,7 +15,7 @@ function listarPanaderia()
         <div class="fila-producto">
             <?php
             if (!empty($row['imagen'])) {
-                echo "<div class='celda-imagen'><img class='imagen-producto' src='../imagenes/" . $row['imagen'] . "'></div>";
+                echo "<div class='celda-imagen'><img class='imagen-producto' src='  ./imagenes/" . $row['imagen'] . "'></div>";
             } else {
                 echo "<div class='celda-imagen'><img class='imagen-producto' src='https://via.placeholder.com/150'></div>";
             }
