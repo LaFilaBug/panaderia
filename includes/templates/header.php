@@ -41,8 +41,8 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="./index.php">Inicio</a></li>
-                    <li><a href="contacto.php">Establecimientos</a></li>
-                    <li><a href="menu.php">Menú</a></li>
+                    <li><a href="./contacto.php">Establecimientos</a></li>
+                    <li><a href="./menu.php">Menú</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if (isset($_SESSION['usuario'])) : ?>
