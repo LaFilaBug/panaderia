@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Registro del cliente</title>
 </head>
 
-<body>
+<body class='bodyRegistro'>
     <?php if ($err): ?>
         <div id="error-container" class="error-container">
             <p class="incorrect">El nombre de usuario ya está en uso. Por favor, elija otro.</p>
@@ -54,20 +54,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
 
-    <form method='POST'>
-        <h1>REGISTRO</h1>
-        <label for='nombre'>&#x1F464; Introduzca nombre:</label>
-        <input type='text' name='nombre' required><br>
-        <label for='usuario'>&#128100; Introduzca nombre usuario:</label>
-        <input type='text' name='usuario' required><br>
-        <label for='clave'>&#128274; Introduzca clave:</label>
-        <input type='password' name='clave'  required><br>
-        <label for='correo'>&#x1F4E7; Introduzca correo:</label>
-        <input type='text' name='correo'  required><br>
+    <form class="formRegistro" method='POST'>
+        <h1 class="h1Registro">REGISTRO</h1>
+        <label class="labelRegistro" for='nombre'>&#x1F464; Introduzca nombre:</label>
+        <input class="inputRegistro" type='text' name='nombre' required><br>
+        <label  class="labelRegistro"  for='usuario'>&#128100; Introduzca nombre usuario:</label>
+        <input   class="inputRegistro" type='text' name='usuario' required><br>
+        <label  class="labelRegistro" for='clave'>&#128274; Introduzca clave:</label>
+        <input  class="inputRegistro" type='password' name='clave'  required><br>
+        <label class="labelRegistro"  for='correo'>&#x1F4E7; Introduzca correo:</label>
+        <input class="inputRegistro" type='text' name='correo'  required><br>
 
-        <div class="container">
-            <button class="button" type='submit'>Enviar</button>
-            <button class="button" onclick="location.href='./index.php'" > Volver</button>
+        <div class="containerRegistro">
+            <button class="buttonRegistro" type='submit'>Enviar</button>
+            <button class="buttonRegistro" onclick="location.href='./index.php'" > Volver</button>
         </div>
 
         <center>  <a href="inicioSesion.php" class="IrAinicio">Inicie sesión aquí si ya tienes cuenta</a> </center> 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
+.bodyRegistro {
     /* Crea un degradado de fondo */
     /* background: linear-gradient(to right, #ffbe45, #96bb00e2); */
     background-image: url('../assets/images/fondoRegistro.jpg');
@@ -15,7 +15,7 @@ body {
     margin: 0;
 }
 
-form {
+.formRegistro {
     /* Estilos del formulario */
     background: #fff;
     padding: 30px;
@@ -26,20 +26,20 @@ form {
 
 }
 
-h1 {
+.h1Registro {
     /* Estilos del título */
     text-align: center;
     margin-bottom: 30px;
     color: #333;
 }
 
-label {
+.labelRegistro {
     /* Estilos de las etiquetas */
     display: block;
     margin-bottom: 5px;
     color: #666;
 }
-input {
+.inputRegistro {
       /* Estilos de los campos de entrada */
       width: 90%; /* Ajusta el ancho */
       margin: 0 auto; /* Añade márgenes automáticos */
@@ -53,12 +53,12 @@ input {
       outline: none; /* Elimina el contorno al seleccionar el campo de entrada */
 }
 
-input:focus {
+.inputRegistro:focus {
     /* Cambia el color de la línea inferior cuando el campo de entrada está enfocado */
     border-bottom: 2px solid #ffdd00;
 }
 
-button {
+.buttonRegistro {
     /* Estilos del botón */
     width: 40%;
     padding: 10px;
@@ -72,11 +72,11 @@ button {
     font-size: medium;
 }
 
-button:hover {
+.buttonRegistro:hover {
     /* Estilos del botón al pasar el ratón */
     background: #a74000;
 }
-.container {
+.containerRegistro {
     display: flex;
     justify-content: space-between;
 }
@@ -99,29 +99,3 @@ button:hover {
 
 /* Estilos de la ventana emergente de error */
 
-.error-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f2dede;
-    padding: 20px;
-    border: 1px solid #ebccd1;
-    border-radius: 5px;
-    text-align: center;
-    z-index: 1000;
-}
-
-.incorrect {
-    color: red;
-    font-weight: bold;
-}
-
-.close-btn {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #a94442;
-}
