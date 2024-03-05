@@ -73,7 +73,15 @@
 
 .dark {
   background-color: #000000;
-  background-image: url('/imagenes/puntos_negros.jpg');
+  background-image: url('/imagenes/negro.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  .celda-nombre,
+  .celda-descripcion,
+  .celda-precio {
+    color: #000 !important;
+  }
 }
 
 .darker {

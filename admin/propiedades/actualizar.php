@@ -19,39 +19,37 @@ function obtenerProductoPorId($id)
 // Obtener su id
 $idProducto = $_GET['id'];
 $producto = obtenerProductoPorId($idProducto);
-if (!$producto) {
-    header("Location: ../../error404.php"); 
-    exit;
-}
 
 
-if (!$producto) {
-    header("Location: ../../error404.php"); 
-    exit;
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : '';
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
     $precio = isset($_POST['precio']) && is_numeric($_POST['precio']) ? $_POST['precio'] : 0.0;
 
+    // Validate the inputs
+    if (empty($nombre) || empty($descripcion) || $precio <= 0) {
+        // Handle the error, e.g., show an error message to the user
+        $error_message = "Please ensure all fields are filled correctly.";
+    } else {
+        // Proceed with the update
+        // ...
 
-    $nombreImagen = $producto['imagen']; 
-    if (isset($_FILES['imagen']['size']) && $_FILES['imagen']['size'] > 0) {
-        $imagen = $_FILES['imagen'];
-        $nombreImagen = $imagen['name'];
-        $rutaImagen = '../../imagenes/' . $nombreImagen;
-        move_uploaded_file($imagen['tmp_name'], $rutaImagen);
+        $nombreImagen = $producto['imagen']; 
+        if (isset($_FILES['imagen']['size']) && $_FILES['imagen']['size'] > 0) {
+            $imagen = $_FILES['imagen'];
+            $nombreImagen = $imagen['name'];
+            $rutaImagen = '../../imagenes/' . $nombreImagen;
+            move_uploaded_file($imagen['tmp_name'], $rutaImagen);
+        }
+        
+        // Actualizar los datos del producto en la base de datos
+        $consulta_actualizar = $bd->prepare("UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?");
+        $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
+        $consulta_actualizar->execute();
     }
-
-    // Actualizar los datos del producto en la base de datos
-    $consulta_actualizar = $bd->prepare("UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?");
-    $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
-    $consulta_actualizar->execute();
-
-    // Redirigir al usuario a la página de inicio del administrador después de guardar los cambios
-    header("Location: ./../index.php");
+} else {
+    header("Location: ../../error404.php");
     exit;
 } 
 
