@@ -1,0 +1,56 @@
+.body-class {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.title-class {
+    text-align: center;
+    color: #333;
+}
+
+.form-class {
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.label-class {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
+
+.input-class, .textarea-class {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.submit-class {
+    display: block;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-class:hover {
+    background-color: #45a049;
+}
+
+.link-class {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    color: #333;
+}
