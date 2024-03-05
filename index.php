@@ -1,7 +1,6 @@
 <?php
 include 'includes/templates/header.php';
 ?>
-
 <div class="container content">
     <div class="row">
         <div class="col-sm-4">
@@ -96,7 +95,7 @@ include 'includes/templates/header.php';
         <span class="sr-only">Siguiente</span>
     </a>
 </div>
-</div>
+
 
 
 <?php

@@ -9,7 +9,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-image: url("https://res.cloudinary.com/dbqqjaqqa/image/upload/v1490097089/bg_ftta6d.png");
-  color: #49130c;
+  color: #000000;
 }
 
 .navbar {
@@ -41,12 +41,15 @@ body {
     line-height: 27px;
   }
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a {
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .open > a {
   background-color: #e6637f;
 }
 
-.navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  background-color: #F2D4A7;
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #f2d4a7;
 }
 
 .navbar-brand > img {
@@ -64,15 +67,17 @@ body {
     border-radius: 5px;
 } */
 /* MODO OSCURO DANIEL*/
-.oscuridad {
-  margin-top: 2%;
-  margin-left: 10%;
-  border-bottom: #000, 1px;
-}
+
+/*DarkTHeme By Adri*/
 
 .dark {
-  background-color: #000;
-  color: #f1f1f1;
+  background-color: #000000;
+  background-image: url("/imagenes/puntos_negros.jpg");
+}
+/*Somos los congitos estilos del (boton oscuro)by Adri*/
+.darker {
+  background: rgba(0, 0, 0, 0);
+  border-style: none;
 }
 
 .parrafo {
@@ -193,7 +198,9 @@ h3 {
   height: auto;
 }
 
-.celda-nombre, .celda-descripcion, .celda-precio {
+.celda-nombre,
+.celda-descripcion,
+.celda-precio {
   padding: 10px;
   text-align: center;
   background-color: white;
@@ -218,7 +225,9 @@ footer {
   padding: 0 0 40px;
 }
 
-#footer1, #footer2, #footer3 {
+#footer1,
+#footer2,
+#footer3 {
   text-align: left;
   padding: 0 0 0 90px;
   color: #49130c;
@@ -310,7 +319,11 @@ iframe {
   width: 40%;
   padding: 10px;
   border: none;
-  background: linear-gradient(to right, #ffbe45, rgba(216, 115, 0, 0.8862745098));
+  background: linear-gradient(
+    to right,
+    #ffbe45,
+    rgba(216, 115, 0, 0.8862745098)
+  );
   color: #fff;
   border-radius: 4px;
   cursor: pointer;

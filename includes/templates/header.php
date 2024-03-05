@@ -20,14 +20,11 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     <meta name="viewport" content="width=device-width" />
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel="stylesheet" href="styles/main.css" />
-    <style>
-
-
-    </style>
 </head>
 
 <body>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -44,8 +41,8 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="./index.php">Inicio</a></li>
-                    <li><a href="contacto.php">Establecimientos</a></li>
-                    <li><a href="menu.php">Menú</a></li>
+                    <li><a href="./contacto.php">Establecimientos</a></li>
+                    <li><a href="./menu.php">Menú</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if (isset($_SESSION['usuario'])) : ?>
@@ -60,17 +57,13 @@ if (isset($_GET['logout']) && $_GET['logout'] == 'true') {
                     <?php if (isset($_SESSION['usuario'])) : ?>
                         <li><a href="index.php?logout=true">Cerrar sesión</a></li>
                     <?php endif; ?>
-                    <li><a><button class="dark" onclick="oscuridad()">🌙</button></a></li>
+                    <li><a><button class="darker" onclick="oscuridad()">🌙</button></a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <script>
-        function oscuridad() {
-  let element = document.body;
-  element.classList.toggle("dark");
-}
 
-    </script>
+    <script src="/scripts/main.js"></script>
 </body>
+
 </html>

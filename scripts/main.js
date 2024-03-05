@@ -32,10 +32,15 @@ window.addEventListener("resize", function () {
 } */
 
 // BOTON OSCURO daniel
-function oscuridad() {
-  let element = document.body;
-  element.classList.toggle("dark");
-}
+// function oscuridad() {
+//   let element = document.body;
+//   element.classList.toggle("dark");
+// }
 
+/*Boton DarkTheme Adri*/
+function oscuridad() {
+  var body = document.querySelector('body');
+  body.classList.toggle('dark');
+}
 
 
