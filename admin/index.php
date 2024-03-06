@@ -80,12 +80,12 @@ function listarPanaderia()
                 <td>
                 <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
     <input type='hidden' name='id' value='<?= $row['id'] ?>'>
-    <button type='submit' class='edit' name='editar'>Editar</button>
+    <button type='submit' class='edit-admin' name='editar'>Editar</button>
 </form>
 
                     <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='post' style='display: inline;'>
                         <input type='hidden' name='id' value='<?= $row['id'] ?>'>
-                        <button type='submit' class='delete' name='borrar'>Borrar</button>
+                        <button type='submit' class='delete-admin' name='borrar'>Borrar</button>
                     </form>
                 </td>
             </tr>
