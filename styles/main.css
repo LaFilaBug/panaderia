@@ -720,23 +720,19 @@ iframe {
   margin: 5% 5% 5% 5%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  /* Tres columnas */
   gap: 20px;
-  /* Espacio entre las celdas */
 }
-
 @media (max-width: 768px) {
   .productos {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* Dos columnas */
   }
 }
 @media (max-width: 500px) {
   .productos {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    /* Una columna */
   }
 }
+
 .fila-producto {
   border-radius: 15px;
   box-shadow: #ccc 0px 0px 10px;
@@ -744,6 +740,10 @@ iframe {
   border: 1px solid #ccc;
   margin-bottom: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .celda-imagen {
