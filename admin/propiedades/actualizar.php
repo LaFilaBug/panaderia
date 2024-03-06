@@ -27,14 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
     $precio = isset($_POST['precio']) && is_numeric($_POST['precio']) ? $_POST['precio'] : 0.0;
 
-    // Validate the inputs
     if (empty($nombre) || empty($descripcion) || $precio <= 0) {
-        // Handle the error, e.g., show an error message to the user
         $error_message = "Please ensure all fields are filled correctly.";
     } else {
-        // Proceed with the update
-        // ...
-
         $nombreImagen = $producto['imagen']; 
         if (isset($_FILES['imagen']['size']) && $_FILES['imagen']['size'] > 0) {
             $imagen = $_FILES['imagen'];
@@ -75,9 +70,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label class="product-edit-label" for="imagen">Imagen:</label>
         <input class="product-edit-input-file" type="file" id="imagen" name="imagen" required>
-        <input class="product-edit-submit" type="submit" value="Guardar Cambios">
+        <input class="product-edit-submit" type="submit" id='submit-button' value="Guardar Cambios">
         <br>
         <a class="product-edit-link" href="../index.php">Volver</a>
     </form>
+    <script>
+    document.getElementById('submit-button').addEventListener('click', function() {
+    alert('Los cambios se han guardado correctamente. Vuelva al inicio para ver los cambios.');
+    });
+</script>
 </body>
 </html>
