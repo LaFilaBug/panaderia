@@ -698,7 +698,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0 auto;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 
 /* Estilos para la barra de navegación */
@@ -733,7 +733,7 @@ body {
 }
 
 .headerAdmin p {
-  margin: 0;
+  margin-top: 0.5rem;
   display: inline-block;
   float: right;
 }
@@ -747,14 +747,19 @@ body {
 /* Estilos para la tabla */
 .tableAdmin {
   margin-top: 70px; /* Para evitar que la tabla se superponga con la barra de navegación */
-  width: 100%;
+  width: 90%; /* Reducir el ancho para dar espacio en los bordes */
+  margin-left: auto; /* Centrar la tabla horizontalmente */
+  margin-right: auto; /* Centrar la tabla horizontalmente */
   border-collapse: collapse;
+  background: wheat;
+  margin-top: 6rem;
+  padding: 1rem;
 }
 
 .tableAdmin th, .tableAdmin td {
   border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+  padding: 2rem;
+  text-align: center;
 }
 
 .tableAdmin tr:nth-child(even) {
@@ -762,7 +767,7 @@ body {
 }
 
 .tableAdmin th {
-  background-color: #4CAF50;
+  background-color: #8B4513;
   color: white;
 }
 
@@ -774,8 +779,20 @@ body {
   cursor: pointer;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .edit-admin {
-  background-color: #4CAF50;
+  margin-right: 5px;
+  background-color: #53aacc;
+  color: #fff;
+}
+
+.edit-admin {
+  background-color: #53aacc;
   color: #fff;
 }
 
@@ -802,6 +819,71 @@ body {
   opacity: 0.8;
 }
 
+.tdText {
+  size: 50px;
+}
+
+/*Media Querys*/
+/* Estilos para pantallas de escritorio grandes */
+@media (min-width: 1200px) {
+  .tableAdmin {
+    width: 80%;
+  }
+  .headerAdmin {
+    padding: 10px 30px;
+  }
+  .tdText {
+    font-size: 20px;
+  }
+}
+/* Estilos para pantallas de escritorio */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tableAdmin {
+    width: 85%;
+  }
+  .headerAdmin {
+    padding: 10px 20px;
+  }
+  .tdText {
+    font-size: 18px;
+  }
+}
+/* Estilos para tablets en orientación horizontal e iPads */
+@media (min-width: 768px) and (max-width: 991px) {
+  .tableAdmin {
+    width: 90%;
+  }
+  .headerAdmin {
+    padding: 10px 15px;
+  }
+  .tdText {
+    font-size: 16px;
+  }
+}
+/* Estilos para tablets en orientación vertical y smartphones grandes */
+@media (min-width: 576px) and (max-width: 767px) {
+  .tableAdmin {
+    width: 95%;
+  }
+  .headerAdmin {
+    padding: 10px 10px;
+  }
+  .tdText {
+    font-size: 14px;
+  }
+}
+/* Estilos para smartphones */
+@media (max-width: 575px) {
+  .tableAdmin {
+    width: 100%;
+  }
+  .headerAdmin {
+    padding: 10px 5px;
+  }
+  .tdText {
+    font-size: 12px;
+  }
+}
 .productos {
   margin: 5% 5% 5% 5%;
   display: grid;
