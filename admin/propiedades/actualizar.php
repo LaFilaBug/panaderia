@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $precio = isset($_POST['precio']) && is_numeric($_POST['precio']) ? $_POST['precio'] : 0.0;
 
     if (empty($nombre) || empty($descripcion) || $precio <= 0) {
-        $error_message = "Please ensure all fields are filled correctly.";
+        $error_message = "ERROR.";
     } else {
         $nombreImagen = $producto['imagen']; 
         if (isset($_FILES['imagen']['size']) && $_FILES['imagen']['size'] > 0) {
@@ -40,8 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Actualizar los datos del producto en la base de datos
         $consulta_actualizar = $bd->prepare("UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?");
-        $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
+        $resultado = $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
         $consulta_actualizar->execute();
+        if ($resultado) {
+            echo "<script>alert('Los cambios se han guardado correctamente. Vuelva al inicio para ver los cambios.');</script>";
+        } else {
+            echo "<script>alert('Ha ocurrido un error al guardar los cambios.');</script>";
+        }
     }
 } else {
     header("Location: ../../error404.php");
@@ -74,10 +79,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
         <a class="product-edit-link" href="../index.php">Volver</a>
     </form>
-    <script>
-    document.getElementById('submit-button').addEventListener('click', function() {
-    alert('Los cambios se han guardado correctamente. Vuelva al inicio para ver los cambios.');
-    });
-</script>
 </body>
 </html>
