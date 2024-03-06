@@ -58,6 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 <link rel="stylesheet" href="../../styles/main.css">
 <title>Editar Producto</title>
 </head>

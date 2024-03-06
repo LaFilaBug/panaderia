@@ -3,15 +3,6 @@
     font-family: Arial, sans-serif;
     margin: 0 auto;
     padding: 0;
-    background-color: #ffffff;
-}
-
-/* Estilos para la barra de navegación */
-/* Estilos generales */
-.bodyAdmin {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    padding: 0;
     background-color: #f4f4f4;
 }
 
@@ -19,28 +10,26 @@
 .headerAdmin {
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-.headerAdmin h1 {
+.headerAdmin h1, .headerAdmin h2, .headerAdmin p {
     margin: 0;
     display: inline-block;
 }
 
 .headerAdmin h2 {
-    margin: 0;
-    display: inline-block;
     margin-left: 20px;
 }
 
 .headerAdmin p {
     margin-top: .5rem;
-    display: inline-block;
-    float: right;
 }
 
 .headerAdmin a {
@@ -51,12 +40,12 @@
 
 /* Estilos para la tabla */
 .tableAdmin {
-    margin-top: 70px; /* Para evitar que la tabla se superponga con la barra de navegación */
-    width: 90%; /* Reducir el ancho para dar espacio en los bordes */
-    margin-left: auto; /* Centrar la tabla horizontalmente */
-    margin-right: auto; /* Centrar la tabla horizontalmente */
+    margin-top: 70px; 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
     border-collapse: collapse;
-    background: wheat;
+    background-color: white;
     margin-top: 6rem;
     padding: 1rem;
 }
@@ -65,10 +54,6 @@
     border: 1px solid #ddd;
     padding: 2rem;
     text-align: center;
-}
-
-.tableAdmin tr:nth-child(even) {
-    background-color: #f2f2f2;
 }
 
 .tableAdmin th {
@@ -83,19 +68,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
-.flex{
-    display: flex;
-    flex-direction: row; // Esto es opcional, ya que 'row' es el valor por defecto
-    align-items: center;
-}
+
 .edit-admin {
     margin-right: 5px;
     background-color: #53aacc;
-    color: #fff;
-}
-
-.edit-admin {
-    background-color:#53aacc;
     color: #fff;
 }
 
@@ -103,6 +79,14 @@
     background-color: #f44336;
     color: #fff;
 }
+.edits-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: end;
+
+}
+
 
 /* Estilos para los enlaces que parecen botones */
 .headerAdmin a.crear, .headerAdmin a.logout {
@@ -122,73 +106,53 @@
     opacity: 0.8;
 }
 
-.tdText{
-    size: 50px;
-}
-
 /*Media Querys*/
-
-/* Estilos para pantallas de escritorio grandes */
-@media (min-width: 1200px) {
-    .tableAdmin {
-        width: 80%;
-    }
-    .headerAdmin {
-        padding: 10px 30px;
-    }
-    .tdText {
-        font-size: 20px;
-    }
-}
-
-/* Estilos para pantallas de escritorio */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .tableAdmin {
-        width: 85%;
-    }
-    .headerAdmin {
-        padding: 10px 20px;
-    }
-    .tdText {
-        font-size: 18px;
-    }
-}
-
-/* Estilos para tablets en orientación horizontal e iPads */
-@media (min-width: 768px) and (max-width: 991px) {
-    .tableAdmin {
-        width: 90%;
-    }
-    .headerAdmin {
-        padding: 10px 15px;
-    }
-    .tdText {
-        font-size: 16px;
-    }
-}
-
-/* Estilos para tablets en orientación vertical y smartphones grandes */
-@media (min-width: 576px) and (max-width: 767px) {
-    .tableAdmin {
-        width: 95%;
-    }
-    .headerAdmin {
-        padding: 10px 10px;
-    }
-    .tdText {
-        font-size: 14px;
-    }
-}
-
-/* Estilos para smartphones */
-@media (max-width: 575px) {
+@media screen and (max-width: 825px) {
+    /* Estilos para dispositivos móviles en orientación horizontal */
     .tableAdmin {
         width: 100%;
     }
     .headerAdmin {
-        padding: 10px 5px;
+        flex-direction: column;
+        align-items: center;
     }
-    .tdText {
-        font-size: 12px;
+    .headerAdmin a.crear, .headerAdmin a.logout {
+        padding: 5px 10px;
+        font-size: 0.8em; /* Reduce el tamaño de la fuente */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Estilos para dispositivos móviles en orientación vertical */
+    .tableAdmin {
+        width: 100%;
+        display: block;
+    }
+    .tableAdmin thead {
+        display: none;
+    }
+    .tableAdmin tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+    .tableAdmin td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+    .tableAdmin td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .headerAdmin {
+        padding: 10px;
+    }
+    .headerAdmin a.crear, .headerAdmin a.logout {
+        padding: 2px 5px;
+        font-size: 0.7em; /* Reduce aún más el tamaño de la fuente */
     }
 }

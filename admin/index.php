@@ -78,7 +78,7 @@ function listarPanaderia()
                     <?= $row['precio'] ?>€
                 </td>
                 <td>
-                    <div class="flex">
+                    <div class="edits-inputs">
                         <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
                             <input type='hidden' name='id' value='<?= $row['id'] ?>'>
                             <button type='submit' class='edit-admin' name='editar'>Editar</button>
