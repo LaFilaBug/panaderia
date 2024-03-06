@@ -1,78 +1,99 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+/* Estilos generales */
+.bodyAdmin {
     font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.header {
+/* Estilos para la barra de navegación */
+.headerAdmin {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
     position: fixed;
+    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #dee2e6;
     z-index: 1000;
 }
 
-table {
-    margin-top: 250px;
-    width: 80%;
+.headerAdmin h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+.headerAdmin h2 {
+    margin: 0;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.headerAdmin p {
+    margin: 0;
+    display: inline-block;
+    float: right;
+}
+
+.headerAdmin a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+/* Estilos para la tabla */
+.tableAdmin {
+    margin-top: 70px; /* Para evitar que la tabla se superponga con la barra de navegación */
+    width: 100%;
     border-collapse: collapse;
+}
+
+.tableAdmin th, .tableAdmin td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
-table th,
-table td {
-    border: 1px solid #dee2e6;
-    padding: 10px;
-    border-radius: 5px;
+.tableAdmin tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
-table th {
-    background-color: #52a8ff;
+.tableAdmin th {
+    background-color: #4CAF50;
     color: white;
 }
 
-table td {
-    vertical-align: top;
-}
-
-.edit,
-.delete,
-.crear,
-.logout {
+/* Estilos para los botones */
+.edit-admin, .delete-admin {
+    padding: 5px 10px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    margin: 5px;
 }
 
-.edit {
-    background-color: #f0ad4e;
-    color: white;
+.edit-admin {
+    background-color: #4CAF50;
+    color: #fff;
 }
 
-.delete {
-    background-color: #d9534f;
-    color: white;
+.delete-admin {
+    background-color: #f44336;
+    color: #fff;
 }
 
-.crear {
-    background-color: #5cb85c;
-    color: white;
+/* Estilos para los enlaces que parecen botones */
+.headerAdmin a.crear, .headerAdmin a.logout {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
 }
 
-.logout {
-    background-color: #d9534f;
-    color: white;
+.headerAdmin a.logout {
+    background-color: #f44336;
+}
+
+.headerAdmin a.crear:hover, .headerAdmin a.logout:hover {
+    opacity: 0.8;
 }
