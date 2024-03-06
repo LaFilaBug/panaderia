@@ -10,6 +10,12 @@
         grid-template-columns: repeat(2, minmax(0, 1fr)); /* Dos columnas */
     }
 }
+
+@media (max-width: 500px) { 
+    .productos {
+        grid-template-columns: repeat(1, minmax(0, 1fr)); /* Una columna */
+    }
+}
  
 .fila-producto {
     border-radius: 15px;
