@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Título de tu página</title>
-    <link rel="stylesheet" type="text/css" href="./styles/paginaDestino.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body>
 

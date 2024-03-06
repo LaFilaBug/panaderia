@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zona Admin CREAR</title>
-<link rel="stylesheet" type="text/css" href="/styles/stylesAdmin/crear.css">
+<link rel="stylesheet" href="../../../styles/main.css">
 </head>
 <body>
     <div class="admin-container">
