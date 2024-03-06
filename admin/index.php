@@ -99,7 +99,7 @@ function listarPanaderia()
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/index.css">
     <title>Panadería</title>
 </head>
 
