@@ -48,18 +48,18 @@ function listarPanaderia()
     $consulta->execute();
 
     $resultado = $consulta->get_result();
-    ?>
+?>
     <table class="tableAdmin">
         <thead>
-        <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-        <?php while ($row = $resultado->fetch_assoc()): ?>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <?php while ($row = $resultado->fetch_assoc()) : ?>
             <tr>
                 <?php
                 if (!empty($row['imagen'])) {
@@ -68,30 +68,31 @@ function listarPanaderia()
                     echo "<td><img src='https://via.placeholder.com/150' width='100'></td>";
                 }
                 ?>
-                <td>
+                <td class="tdText">
                     <?= $row['nombre'] ?>
                 </td>
-                <td>
+                <td class="tdText">
                     <?= $row['descripcion'] ?>
                 </td>
-                <td>
+                <td class="tdText">
                     <?= $row['precio'] ?>€
                 </td>
                 <td>
-                <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
-    <input type='hidden' name='id' value='<?= $row['id'] ?>'>
-    <button type='submit' class='edit-admin' name='editar'>Editar</button>
-</form>
-
-                    <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='post' style='display: inline;'>
-                        <input type='hidden' name='id' value='<?= $row['id'] ?>'>
-                        <button type='submit' class='delete-admin' name='borrar'>Borrar</button>
-                    </form>
+                    <div class="flex">
+                        <form action='./propiedades/actualizar.php?id=<?= $row['id'] ?>' method='post' style='display: inline;'>
+                            <input type='hidden' name='id' value='<?= $row['id'] ?>'>
+                            <button type='submit' class='edit-admin' name='editar'>Editar</button>
+                        </form>
+                        <form action='<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>' method='post' style='display: inline;'>
+                            <input type='hidden' name='id' value='<?= $row['id'] ?>'>
+                            <button type='submit' class='delete-admin' name='borrar'>Borrar</button>
+                        </form>
+                    </div>
                 </td>
             </tr>
         <?php endwhile; ?>
     </table>
-    <?php
+<?php
 }
 ?>
 
@@ -99,18 +100,20 @@ function listarPanaderia()
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/admin.css">
+    <link rel="stylesheet" type="text/css" href="./../styles/main.css">
     <title>Panadería</title>
 </head>
 
 <body class="bodyAdmin">
     <div class="headerAdmin">
         <h1>Zona Admin</h1>
-        <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
+
         <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php" class="crear">Crear Producto</a>
-        <a href='./../index.php?logout=true' class='logout'>Cerrar Sesión</a></p>
+            <a href='./../index.php?logout=true' class='logout'>Cerrar Sesión</a>
+        </p>
     </div>
     <?php listarPanaderia(); ?>
-  
+
 </body>
+
 </html>
