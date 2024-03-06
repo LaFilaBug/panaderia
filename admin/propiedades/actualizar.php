@@ -58,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../styles/stylesAdmin/actualizar.css">
-    <title>Editar Producto</title>
+<link rel="stylesheet" href="../../../styles/main.css">
+<title>Editar Producto</title>
 </head>
 <body class="product-edit-body">
     <form class="product-edit-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $idProducto); ?>" method="post" enctype="multipart/form-data">
