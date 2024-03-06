@@ -49,7 +49,7 @@ function listarPanaderia()
 
     $resultado = $consulta->get_result();
     ?>
-    <table>
+    <table class="tableAdmin">
         <thead>
         <tr>
             <th>Imagen</th>
@@ -99,12 +99,12 @@ function listarPanaderia()
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/admin.css">
+    <link rel="stylesheet" type="text/css" href="../styles/stylesAdmin/main.css">
     <title>Panadería</title>
 </head>
 
-<body>
-    <div class="header">
+<body class="bodyAdmin">
+    <div class="headerAdmin">
         <h1>Zona Admin</h1>
         <h2>Hola, <?php echo $_SESSION['nombre'] ?></h2>
         <p>Si desea crear un producto, clickar aquí <a href="./propiedades/crear.php" class="crear">Crear Producto</a>
