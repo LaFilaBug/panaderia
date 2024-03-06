@@ -865,6 +865,19 @@ input {
     font-size: 1.2em; /* Aumenta el tamaño de la fuente */
   }
 }
+@media (max-width: 600px) {
+  .headerAdmin {
+    padding: 10px;
+  }
+  .headerAdmin h1, .headerAdmin h2, .headerAdmin p, .headerAdmin a {
+    display: block;
+    margin: 5px 0;
+  }
+  .headerAdmin a.crear, .headerAdmin a.logout {
+    display: inline-block;
+    margin: 5px 0;
+  }
+}
 .productos {
   margin: 5% 5% 5% 5%;
   display: grid;
