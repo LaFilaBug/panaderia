@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/styles/stylesAdmin/actualizar.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Editar Producto</title>
 </head>
 <body class="product-edit-body">
