@@ -12,4 +12,4 @@ Este proyecto está siendo desarrollado por:
 - [Adrian Iglesias Riño](https://github.com/Torremolinos) - Tester y multitasking
 - [Iván Lorenzo Ruiz](https://github.com/ivanlr96) - JavaScript
 
-**Las contraseñas están hasheadas, pero para entrar en los usuarios creados por defecto, las contraseñas son el nombre de usuario.
+**Las contraseñas están hasheadas, pero para entrar en los usuarios creados por defecto, las contraseñas son el nombre de usuario.**
