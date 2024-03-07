@@ -2,7 +2,7 @@
 include 'includes/templates/header.php';
 ?>
 <head>
-    <link rel="stylesheet" type="text/css" href="/styles/contacto.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <section id="contacto" class="contacto">
@@ -23,7 +23,7 @@ include 'includes/templates/header.php';
         <p>Domingo: Cerrado</p>
     </div>
     <br>
-        <a class="contacto-link" href="/panaderia/index.php">Volver a la página principal</a>
+        <a class="contacto-link" href="./index.php">Volver a la página principal</a>
     <br>
     </section>
     <script src="/scripts/index.js"></script>

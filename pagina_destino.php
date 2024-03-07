@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Título de tu página</title>
-    <link rel="stylesheet" type="text/css" href="./styles/paginaDestino.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body>
 
@@ -12,7 +12,6 @@ include 'includes/templates/header.php';
 
 $bd = conectarDB();
 
-// Asegúrate de que el ID del producto está disponible, por ejemplo, a través de GET o POST
 if (isset($_GET['id'])) {
     $idProducto = $_GET['id'];
 
@@ -23,7 +22,6 @@ if (isset($_GET['id'])) {
     $resultado = $consulta->get_result();
     $producto = $resultado->fetch_assoc();
     if ($producto) {
-        // Muestra el producto
         ?>
         <body>
             <div class="producto-destino">
