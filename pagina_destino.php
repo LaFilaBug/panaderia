@@ -12,7 +12,6 @@ include 'includes/templates/header.php';
 
 $bd = conectarDB();
 
-// Asegúrate de que el ID del producto está disponible, por ejemplo, a través de GET o POST
 if (isset($_GET['id'])) {
     $idProducto = $_GET['id'];
 

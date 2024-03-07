@@ -3,7 +3,7 @@ session_start();
 include '../includes/config/database.php';
 
 if (!isset($_SESSION["usuario"])) {
-    header("Location: ../../includes/templates/error403.php?redirigido=true");
+    header("Location: ./../../includes/templates/error403.php?redirigido=true");
     exit;
 }
 
