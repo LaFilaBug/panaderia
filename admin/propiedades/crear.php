@@ -52,12 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zona Admin CREAR</title>
-<link rel="stylesheet" href="../../../styles/main.css">
+<link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
     <div class="admin-container">
         <h1 class="admin-title">Zona Admin CREAR</h1>
-        <h2 class="admin-welcome-message">Hola, <?php echo $_SESSION['nombre'] ?></h2>
         <form action="" method="post" enctype="multipart/form-data" class="admin-product-form">
             <label for="nombre" class="admin-product-form-label">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required class="admin-product-form-input">
