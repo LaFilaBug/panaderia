@@ -31,7 +31,6 @@
 .headerAdmin p {
     margin: 0;
     display: inline-block;
-    float: right;
 }
 
 .headerAdmin a {
@@ -96,4 +95,19 @@
 
 .headerAdmin a.crear:hover, .headerAdmin a.logout:hover {
     opacity: 0.8;
+}
+@media (max-width: 600px) {
+    .headerAdmin {
+        padding: 10px;
+    }
+
+    .headerAdmin h1, .headerAdmin h2, .headerAdmin p, .headerAdmin a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .headerAdmin a.crear, .headerAdmin a.logout {
+        display: inline-block;
+        margin: 5px 0;
+    }
 }

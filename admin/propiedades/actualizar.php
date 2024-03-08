@@ -27,14 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : '';
     $precio = isset($_POST['precio']) && is_numeric($_POST['precio']) ? $_POST['precio'] : 0.0;
 
-    // Validate the inputs
     if (empty($nombre) || empty($descripcion) || $precio <= 0) {
-        // Handle the error, e.g., show an error message to the user
-        $error_message = "Please ensure all fields are filled correctly.";
+        $error_message = "ERROR.";
     } else {
-        // Proceed with the update
-        // ...
-
         $nombreImagen = $producto['imagen']; 
         if (isset($_FILES['imagen']['size']) && $_FILES['imagen']['size'] > 0) {
             $imagen = $_FILES['imagen'];
@@ -45,8 +40,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Actualizar los datos del producto en la base de datos
         $consulta_actualizar = $bd->prepare("UPDATE productos SET nombre = ?, descripcion = ?, precio = ?, imagen = ? WHERE id = ?");
-        $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
+        $resultado = $consulta_actualizar->bind_param("ssdsi", $nombre, $descripcion, $precio, $nombreImagen, $idProducto);
         $consulta_actualizar->execute();
+        if ($resultado) {
+            echo "<script>alert('Los cambios se han guardado correctamente. Vuelva al inicio para ver los cambios.');</script>";
+        } else {
+            echo "<script>alert('Ha ocurrido un error al guardar los cambios.');</script>";
+        }
     }
 } else {
     header("Location: ../../error404.php");
@@ -58,8 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../styles/stylesAdmin/actualizar.css">
-    <title>Editar Producto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../../styles/main.css">
+<title>Editar Producto</title>
 </head>
 <body class="product-edit-body">
     <form class="product-edit-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $idProducto); ?>" method="post" enctype="multipart/form-data">
@@ -75,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label class="product-edit-label" for="imagen">Imagen:</label>
         <input class="product-edit-input-file" type="file" id="imagen" name="imagen" required>
-        <input class="product-edit-submit" type="submit" value="Guardar Cambios">
+        <input class="product-edit-submit" type="submit" id='submit-button' value="Guardar Cambios">
         <br>
         <a class="product-edit-link" href="../index.php">Volver</a>
     </form>

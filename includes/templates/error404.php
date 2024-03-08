@@ -77,9 +77,9 @@
     }
   </style>
 </head>
-<body>
+<body class="body404">
 
-  <div class="container">
+  <div class="container404">
     <a href="/" class="brand"><img src="assets/images/draw_svg20210707-31126-55u9kz.svg-removebg-preview.png" width="280" height="200"></a>
 
     <h2>404</h2>
